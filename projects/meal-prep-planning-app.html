@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meal Prep Planning App — a mobile-first tool for planning weekly meals, grocery lists, and prep schedules.">
+  <title>Meal Prep Planning App — Mia Suzuki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__wordmark">Mia Suzuki</a>
+      <nav class="nav__links" aria-label="Primary">
+        <span class="nav__indicator" aria-hidden="true"></span>
+        <a href="../index.html" class="nav__link text-label">Home</a>
+        <a href="../index.html#projects" class="nav__link text-label">Projects</a>
+        <a href="../about.html" class="nav__link text-label">About</a>
+        <a href="../contact.html" class="nav__link text-label">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="../contact.html" class="btn btn--outline">Get in touch</a>
+      </div>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open menu">
+        <span class="nav__toggle-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div class="nav-overlay__header">
+      <span class="nav-overlay__wordmark">Mia Suzuki</span>
+      <button class="nav-overlay__close text-label" type="button" aria-label="Close menu">Close</button>
+    </div>
+    <nav class="nav-overlay__links" aria-label="Mobile">
+      <a href="../index.html" class="nav-overlay__link">Home</a>
+      <a href="../index.html#projects" class="nav-overlay__link">Projects</a>
+      <a href="../about.html" class="nav-overlay__link">About</a>
+      <a href="../contact.html" class="nav-overlay__link">Contact</a>
+    </nav>
+    <div class="nav-overlay__cta">
+      <a href="../contact.html" class="btn btn--outline btn--lg">Get in touch</a>
+    </div>
+  </div>
+
+  <main>
+    <article class="project-page" aria-labelledby="project-heading">
+      <div class="container">
+
+        <a href="../index.html#projects" class="project-page__back text-label">
+          <span aria-hidden="true">←</span> All projects
+        </a>
+
+        <header class="project-page__hero-block">
+          <div class="project-page__hero-copy">
+            <p class="text-caption">App Design</p>
+            <h1 class="project-page__title text-display" id="project-heading">Meal Prep Planning App</h1>
+            <p class="project-page__subtitle text-body">
+              A mobile-first tool that helps busy students plan weekly meals, build grocery lists, and stay on schedule with prep reminders.
+            </p>
+            <div class="project-page__hero-cta">
+              <a href="#" class="btn btn--primary btn--lg">View live site</a>
+            </div>
+          </div>
+          <dl class="project-page__details">
+            <div class="project-page__detail">
+              <dt class="text-caption">Duration</dt>
+              <dd class="text-body">4 weeks</dd>
+            </div>
+            <div class="project-page__detail">
+              <dt class="text-caption">Role</dt>
+              <dd class="text-body">UI/UX Designer</dd>
+            </div>
+            <div class="project-page__detail">
+              <dt class="text-caption">Tools</dt>
+              <dd class="text-body">Figma · React · Netlify</dd>
+            </div>
+          </dl>
+        </header>
+
+        <div class="project-page__hero-media">
+          <div class="project-page__placeholder project-page__placeholder--hero project-card__media--orb" role="img" aria-label="Hero image placeholder">
+            <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Hero image</span>
+          </div>
+        </div>
+
+        <div class="project-page__body">
+
+          <div class="project-page__intro">
+            <p class="text-body">
+              Meal Prep Planning App was designed to reduce the friction of weekly meal planning for students and young professionals who want to eat well without spending hours deciding what to cook.
+            </p>
+            <section class="project-page__section" aria-labelledby="challenge-heading">
+              <h2 class="text-h2" id="challenge-heading">Challenge</h2>
+              <p class="text-body">
+                Users struggled to coordinate recipes, ingredients, and prep time across the week. Existing apps felt cluttered or required too much manual input before delivering value.
+              </p>
+            </section>
+          </div>
+
+          <section class="project-page__section project-page__section--open" aria-labelledby="process-heading">
+            <h2 class="text-h2" id="process-heading">Process</h2>
+            <ol class="project-page__stepper" aria-label="Design process phases">
+              <li class="project-page__step project-page__step--active">
+                <span class="project-page__step-num" aria-hidden="true">1</span>
+                <span class="text-caption">Research</span>
+              </li>
+              <li class="project-page__step">
+                <span class="project-page__step-num" aria-hidden="true">2</span>
+                <span class="text-caption">Define</span>
+              </li>
+              <li class="project-page__step">
+                <span class="project-page__step-num" aria-hidden="true">3</span>
+                <span class="text-caption">Ideate</span>
+              </li>
+              <li class="project-page__step">
+                <span class="project-page__step-num" aria-hidden="true">4</span>
+                <span class="text-caption">Prototype</span>
+              </li>
+              <li class="project-page__step">
+                <span class="project-page__step-num" aria-hidden="true">5</span>
+                <span class="text-caption">Test</span>
+              </li>
+            </ol>
+            <div class="project-page__process-cards">
+              <div class="project-page__process-card">
+                <p class="text-caption">Research</p>
+                <p class="text-body">Interviewed 6 users about meal planning habits and pain points.</p>
+              </div>
+              <div class="project-page__process-card">
+                <p class="text-caption">Define</p>
+                <p class="text-body">Mapped user journeys and prioritized a weekly planner flow.</p>
+              </div>
+              <div class="project-page__process-card">
+                <p class="text-caption">Ideate</p>
+                <p class="text-body">Sketched layout options for calendar, list, and recipe views.</p>
+              </div>
+              <div class="project-page__process-card">
+                <p class="text-caption">Prototype</p>
+                <p class="text-body">Built clickable prototypes for usability testing.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-page__section" aria-labelledby="sketching-heading">
+            <h2 class="text-h2" id="sketching-heading">Sketching</h2>
+            <p class="text-body">Early explorations focused on simplifying the weekly calendar and making grocery lists feel automatic rather than tedious.</p>
+            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Sketch gallery placeholder">
+              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Sketches</span>
+            </div>
+          </section>
+
+          <section class="project-page__section" aria-labelledby="visual-style-heading">
+            <h2 class="text-h2" id="visual-style-heading">Visual Style Development</h2>
+            <p class="text-caption">Moodboard</p>
+            <div class="project-page__placeholder project-page__placeholder--moodboard project-card__media--orb-alt" role="img" aria-label="Moodboard placeholder">
+              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Moodboard</span>
+            </div>
+          </section>
+
+          <section class="project-page__section" aria-labelledby="style-guide-heading">
+            <h2 class="text-h2" id="style-guide-heading">Design System / Style Guide</h2>
+            <div class="project-page__panel project-page__style-guide">
+              <div>
+                <p class="text-caption">Colors</p>
+                <div class="project-page__swatches">
+                  <div class="project-page__swatch">
+                    <span class="project-page__swatch-color" style="background-color: var(--bg-base);"></span>
+                    <span class="text-caption">Base</span>
+                  </div>
+                  <div class="project-page__swatch">
+                    <span class="project-page__swatch-color" style="background-color: var(--accent-default);"></span>
+                    <span class="text-caption">Accent</span>
+                  </div>
+                  <div class="project-page__swatch">
+                    <span class="project-page__swatch-color" style="background-color: var(--fg-primary);"></span>
+                    <span class="text-caption">Ink</span>
+                  </div>
+                  <div class="project-page__swatch">
+                    <span class="project-page__swatch-color" style="background-color: var(--bg-disabled);"></span>
+                    <span class="text-caption">Muted</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-page__type-samples">
+                <p class="text-caption">Typography</p>
+                <p class="text-h2">Albert Sans — Headlines</p>
+                <p class="text-body">Inter — Body and UI labels</p>
+              </div>
+              <div>
+                <p class="text-caption">Components</p>
+                <div class="project-page__components">
+                  <button type="button" class="btn btn--primary">Primary</button>
+                  <button type="button" class="btn btn--outline">Secondary</button>
+                  <span class="text-label">Label</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-page__section" aria-labelledby="wireframes-heading">
+            <h2 class="text-h2" id="wireframes-heading">UI/UX Development</h2>
+            <p class="text-body">Low-fidelity wireframes mapped the core flows: weekly planner, recipe detail, and auto-generated grocery list.</p>
+            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient-alt" role="img" aria-label="Wireframes placeholder">
+              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Wireframes</span>
+            </div>
+          </section>
+
+          <section class="project-page__section" aria-labelledby="gallery-heading">
+            <h2 class="text-h2" id="gallery-heading">Gallery</h2>
+            <div class="project-page__gallery">
+              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb" role="img" aria-label="Screen mockup 1 placeholder">
+                <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Screen 01</span>
+              </div>
+              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Screen mockup 2 placeholder">
+                <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Screen 02</span>
+              </div>
+              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb-alt" role="img" aria-label="Screen mockup 3 placeholder">
+                <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Screen 03</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-page__deploy" aria-labelledby="deployment-heading">
+            <h2 class="text-h2" id="deployment-heading">Deployment</h2>
+            <p class="text-body">The prototype was built with React and deployed on Netlify for user testing and portfolio presentation.</p>
+            <a href="#" class="btn btn--outline">Visit the website</a>
+          </section>
+
+          <section class="project-page__reflection" aria-labelledby="reflection-heading">
+            <h2 class="text-h2" id="reflection-heading">Reflection</h2>
+            <p class="text-body">This project strengthened my ability to balance feature depth with a calm, approachable interface. User testing revealed that grocery list automation was the highest-value moment in the flow.</p>
+            <p class="text-body">If I continued development, I would explore recipe import integrations and smarter prep-time estimates based on user history.</p>
+          </section>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__card">
+      <div class="footer__main">
+        <div class="footer__cta">
+          <span class="footer__cta-icon" aria-hidden="true">✦</span>
+          <h2 class="footer__cta-headline text-h2">I'll be glad to collaborate with you</h2>
+          <p class="footer__cta-text text-body">Open to freelance projects, creative partnerships, and conversations about design-driven development.</p>
+        </div>
+        <div class="footer__columns">
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Navigation</h3>
+            <ul class="footer__column-links">
+              <li><a href="../index.html" class="footer__column-link">Home</a></li>
+              <li><a href="../index.html#projects" class="footer__column-link">Projects</a></li>
+              <li><a href="../about.html" class="footer__column-link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Social</h3>
+            <ul class="footer__column-links">
+              <li><a href="#" class="footer__column-link">GitHub</a></li>
+              <li><a href="#" class="footer__column-link">LinkedIn</a></li>
+              <li><a href="#" class="footer__column-link">X</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Other</h3>
+            <ul class="footer__column-links">
+              <li><a href="#" class="footer__column-link">Resume</a></li>
+              <li><a href="#" class="footer__column-link">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Contact</h3>
+            <ul class="footer__column-links">
+              <li><a href="mailto:hello@portfolio.dev" class="footer__column-link">hello@portfolio.dev</a></li>
+              <li><a href="../contact.html" class="footer__column-link">Book a call</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <p class="text-caption">© 2026 Mia Suzuki. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link text-caption">Terms of Service</a>
+          <a href="#" class="footer__legal-link text-caption">Privacy Policy</a>
+        </div>
+        <a href="#top" class="footer__back-top text-label" id="back-to-top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+      <p class="footer__watermark" aria-hidden="true">Mia Suzuki</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

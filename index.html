@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio — vibe coding projects in design, development, and creative technology.">
+  <title>Portfolio — Vibe Coding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__wordmark">Mia Suzuki</a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <span class="nav__indicator" aria-hidden="true"></span>
+        <a href="index.html" class="nav__link text-label nav__link--active">Home</a>
+        <a href="#projects" class="nav__link text-label">Projects</a>
+        <a href="about.html" class="nav__link text-label">About</a>
+        <a href="contact.html" class="nav__link text-label">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--outline">Get in touch</a>
+      </div>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-overlay"
+        aria-label="Open menu"
+      >
+        <span class="nav__toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div class="nav-overlay__header">
+      <span class="nav-overlay__wordmark">Mia Suzuki</span>
+      <button class="nav-overlay__close text-label" type="button" aria-label="Close menu">Close</button>
+    </div>
+    <nav class="nav-overlay__links" aria-label="Mobile">
+      <a href="index.html" class="nav-overlay__link">Home</a>
+      <a href="#projects" class="nav-overlay__link">Projects</a>
+      <a href="about.html" class="nav-overlay__link">About</a>
+      <a href="contact.html" class="nav-overlay__link">Contact</a>
+    </nav>
+    <div class="nav-overlay__cta">
+      <a href="contact.html" class="btn btn--outline btn--lg">Get in touch</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero__intro">
+          <h1 class="hero__headline text-display" id="hero-heading">
+            I'm Mia Suzuki.
+          </h1>
+          <p class="hero__description text-body">
+            A portfolio of projects built with curiosity, code, and creative direction — exploring how modern tools and thoughtful craft shape the way we build on the web.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary btn--lg">View projects</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__ticker reveal" aria-label="Featured projects">
+        <div class="hero__ticker-track">
+          <ul class="hero__ticker-group">
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--orb">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 01</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--gradient">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 02</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--orb-alt">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 03</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--gradient-alt">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 04</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--gradient">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 05</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--orb">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 06</span>
+              </div>
+            </li>
+          </ul>
+          <ul class="hero__ticker-group" aria-hidden="true">
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--orb">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 01</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--gradient">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 02</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--orb-alt">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 03</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--gradient-alt">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 04</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--gradient">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 05</span>
+              </div>
+            </li>
+            <li class="hero__ticker-item">
+              <div class="hero__ticker-placeholder project-card__media--orb">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 06</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <dl class="hero__stats">
+          <div>
+            <dt class="sr-only">Years learning</dt>
+            <dd class="hero__stat-value" data-count="2">0</dd>
+            <dd class="text-caption">Years</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Projects completed</dt>
+            <dd class="hero__stat-value" data-count="4">0</dd>
+            <dd class="text-caption">Projects</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Technologies explored</dt>
+            <dd class="hero__stat-value" data-count="12">0</dd>
+            <dd class="text-caption">Tools</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Collaborations</dt>
+            <dd class="hero__stat-value" data-count="4">0</dd>
+            <dd class="text-caption">Collabs</dd>
+          </div>
+        </dl>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="projects__header">
+          <div>
+            <p class="text-caption">Selected work</p>
+            <h2 class="text-h2" id="projects-heading">Featured projects</h2>
+          </div>
+          <p class="projects__count text-caption">/ 4</p>
+        </header>
+
+        <div class="projects__grid">
+
+          <article class="project-card reveal">
+            <a href="#" class="project-card__link">
+              <div class="project-card__surface">
+              <div class="project-card__media project-card__media--orb">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 01</span>
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__meta text-caption">Brand System</p>
+                <div class="project-card__title-row">
+                  <h3 class="project-card__title text-title">Studio Dashboard</h3>
+                  <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </div>
+                <p class="project-card__excerpt text-body">
+                  A clean project management interface built with vanilla HTML, CSS, and JavaScript.
+                </p>
+              </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <a href="#" class="project-card__link">
+              <div class="project-card__surface">
+              <div class="project-card__media project-card__media--gradient">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 02</span>
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__meta text-caption">Creative Coding</p>
+                <div class="project-card__title-row">
+                  <h3 class="project-card__title text-title">Skyline Generator</h3>
+                  <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </div>
+                <p class="project-card__excerpt text-body">
+                  An interactive tool that creates architectural silhouettes from simple parameters.
+                </p>
+              </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <a href="#" class="project-card__link">
+              <div class="project-card__surface">
+              <div class="project-card__media project-card__media--orb-alt">
+                <span class="project-card__badge project-card__badge--light text-caption">Image 03</span>
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__meta text-caption">Web Design</p>
+                <div class="project-card__title-row">
+                  <h3 class="project-card__title text-title">Nordic Spaces</h3>
+                  <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </div>
+                <p class="project-card__excerpt text-body">
+                  An editorial architecture portfolio inspired by Scandinavian design principles.
+                </p>
+              </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <a href="#" class="project-card__link">
+              <div class="project-card__surface">
+              <div class="project-card__media project-card__media--gradient-alt">
+                <span class="project-card__badge project-card__badge--dark text-caption">Image 04</span>
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__meta text-caption">Tooling</p>
+                <div class="project-card__title-row">
+                  <h3 class="project-card__title text-title">Design Token Kit</h3>
+                  <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </div>
+                <p class="project-card__excerpt text-body">
+                  A systematic CSS token library for consistent spacing, color, and typography.
+                </p>
+              </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="footer__card">
+      <div class="footer__main">
+        <div class="footer__cta">
+          <span class="footer__cta-icon" aria-hidden="true">✦</span>
+          <h2 class="footer__cta-headline text-h2">I'll be glad to collaborate with you</h2>
+          <p class="footer__cta-text text-body">
+            Open to freelance projects, creative partnerships, and conversations about design-driven development.
+          </p>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Navigation</h3>
+            <ul class="footer__column-links">
+              <li><a href="index.html" class="footer__column-link footer__column-link--active">Home</a></li>
+              <li><a href="#projects" class="footer__column-link">Projects</a></li>
+              <li><a href="about.html" class="footer__column-link">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Social</h3>
+            <ul class="footer__column-links">
+              <li><a href="#" class="footer__column-link">GitHub</a></li>
+              <li><a href="#" class="footer__column-link">LinkedIn</a></li>
+              <li><a href="#" class="footer__column-link">X</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Other</h3>
+            <ul class="footer__column-links">
+              <li><a href="#" class="footer__column-link">Resume</a></li>
+              <li><a href="#" class="footer__column-link">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Contact</h3>
+            <ul class="footer__column-links">
+              <li><a href="mailto:hello@portfolio.dev" class="footer__column-link">hello@portfolio.dev</a></li>
+              <li><a href="contact.html" class="footer__column-link">Book a call</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        <p class="text-caption">© 2026 Portfolio. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link text-caption">Terms of Service</a>
+          <a href="#" class="footer__legal-link text-caption">Privacy Policy</a>
+        </div>
+        <a href="#top" class="footer__back-top text-label" id="back-to-top">
+          Back to top
+          <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+
+      <p class="footer__watermark" aria-hidden="true">Mia Suzuki</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

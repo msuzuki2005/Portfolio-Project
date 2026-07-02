@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Mia Suzuki — graphic design student, creative technologist, and portfolio maker.">
+  <title>About — Mia Suzuki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__wordmark">Mia Suzuki</a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <span class="nav__indicator" aria-hidden="true"></span>
+        <a href="index.html" class="nav__link text-label">Home</a>
+        <a href="index.html#projects" class="nav__link text-label">Projects</a>
+        <a href="about.html" class="nav__link text-label nav__link--active" aria-current="page">About</a>
+        <a href="contact.html" class="nav__link text-label">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--outline">Get in touch</a>
+      </div>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-overlay"
+        aria-label="Open menu"
+      >
+        <span class="nav__toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div class="nav-overlay__header">
+      <span class="nav-overlay__wordmark">Mia Suzuki</span>
+      <button class="nav-overlay__close text-label" type="button" aria-label="Close menu">Close</button>
+    </div>
+    <nav class="nav-overlay__links" aria-label="Mobile">
+      <a href="index.html" class="nav-overlay__link">Home</a>
+      <a href="index.html#projects" class="nav-overlay__link">Projects</a>
+      <a href="about.html" class="nav-overlay__link">About</a>
+      <a href="contact.html" class="nav-overlay__link">Contact</a>
+    </nav>
+    <div class="nav-overlay__cta">
+      <a href="contact.html" class="btn btn--outline btn--lg">Get in touch</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="about-page" aria-labelledby="about-heading">
+      <div class="container about-page__grid">
+        <div class="about-page__intro">
+          <h1 class="about-page__name text-h1" id="about-heading">Mia Suzuki</h1>
+          <div class="about-page__bio">
+            <p class="text-body">
+              I'm a graphic design student exploring the space where visual craft meets code — building thoughtful digital experiences one project at a time.
+            </p>
+            <p class="text-body">
+              My work is driven by clarity, structure, and a love for systems that feel as good as they look. Outside the studio, you'll find me in marching band or chasing down new tools to learn.
+            </p>
+          </div>
+          <button type="button" class="btn btn--outline btn--lg about-page__resume">
+            Download my resume
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="about-page__experience">
+          <h2 class="sr-only">Work experience</h2>
+          <div class="accordion" data-accordion>
+
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  aria-expanded="false"
+                  aria-controls="exp-panel-1"
+                  id="exp-trigger-1"
+                >
+                  <span class="accordion__trigger-row">
+                    <span class="accordion__title">Graphic Design Intern</span>
+                    <span class="accordion__date text-caption">May 2026 — Present</span>
+                  </span>
+                  <span class="accordion__meta-row">
+                    <span class="accordion__org text-body text-muted">Rippke Design</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="exp-panel-1"
+                role="region"
+                aria-labelledby="exp-trigger-1"
+                aria-hidden="true"
+              >
+                <div class="accordion__panel-inner">
+                  <p class="text-body text-muted">
+                    At Rippke Design, I work with a team of designers in a fast paced environment to complete projects for clients across the nation in various fields and industries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item is-open">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  aria-expanded="true"
+                  aria-controls="exp-panel-2"
+                  id="exp-trigger-2"
+                >
+                  <span class="accordion__trigger-row">
+                    <span class="accordion__title">Graphic Designer</span>
+                    <span class="accordion__date text-caption">Jan 2025 — Present</span>
+                  </span>
+                  <span class="accordion__meta-row">
+                    <span class="accordion__org text-body text-muted">MSS/BUILD, Iowa State University College of Design</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="exp-panel-2"
+                role="region"
+                aria-labelledby="exp-trigger-2"
+              >
+                <div class="accordion__panel-inner">
+                  <p class="text-body text-muted">
+                    As one of the designers with the MSS (Multicultural Student Success) and BUILD organizations, I collaborate with a team of designers to create marketing materials and promotional publications used to advertise events and workshops.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  aria-expanded="false"
+                  aria-controls="exp-panel-3"
+                  id="exp-trigger-3"
+                >
+                  <span class="accordion__trigger-row">
+                    <span class="accordion__title">Graphic Design Intern</span>
+                    <span class="accordion__date text-caption">May — Aug 2025</span>
+                  </span>
+                  <span class="accordion__meta-row">
+                    <span class="accordion__org text-body text-muted">Iowa State University Extension and Outreach</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="exp-panel-3"
+                role="region"
+                aria-labelledby="exp-trigger-3"
+                aria-hidden="true"
+              >
+                <div class="accordion__panel-inner">
+                  <p class="text-body text-muted">
+                    Working with the Story County regional director and Iowa 4-H programs I designed flyers, brochures, and booklets to market 4-H clubs and gardening/nutritional programming. I also worked with the Story County Fairboard to help improve fairgrounds and designed the map and schedule brochure that was used for the 2025 Story County Fair.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  aria-expanded="false"
+                  aria-controls="exp-panel-4"
+                  id="exp-trigger-4"
+                >
+                  <span class="accordion__trigger-row">
+                    <span class="accordion__title">BUILD Peer Mentor</span>
+                    <span class="accordion__date text-caption">Jan — May 2025</span>
+                  </span>
+                  <span class="accordion__meta-row">
+                    <span class="accordion__org text-body text-muted">BUILD, Iowa State University College of Design</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="exp-panel-4"
+                role="region"
+                aria-labelledby="exp-trigger-4"
+                aria-hidden="true"
+              >
+                <div class="accordion__panel-inner">
+                  <p class="text-body text-muted">
+                    During my time with BUILD, I mentored first year design students and guided them through their time in the core program. If they had any questions about any classes, their assignments/projects, or needed advice on their work, I was there as their mentor to give them any and all support that they needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  aria-expanded="false"
+                  aria-controls="exp-panel-5"
+                  id="exp-trigger-5"
+                >
+                  <span class="accordion__trigger-row">
+                    <span class="accordion__title">Freelance</span>
+                    <span class="accordion__date text-caption">2022 — Present</span>
+                  </span>
+                  <span class="accordion__meta-row">
+                    <span class="accordion__org text-body text-muted">Client Work</span>
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="exp-panel-5"
+                role="region"
+                aria-labelledby="exp-trigger-5"
+                aria-hidden="true"
+              >
+                <div class="accordion__panel-inner">
+                  <p class="text-body text-muted">
+                    I work with clients throughout the year to develop custom branding, logos, marketing assets, and more, managing projects from concept to final delivery. I collaborate closely with each client to understand their vision and goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="footer__card">
+      <div class="footer__main">
+        <div class="footer__cta">
+          <span class="footer__cta-icon" aria-hidden="true">✦</span>
+          <h2 class="footer__cta-headline text-h2">I'll be glad to collaborate with you</h2>
+          <p class="footer__cta-text text-body">
+            Open to freelance projects, creative partnerships, and conversations about design-driven development.
+          </p>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Navigation</h3>
+            <ul class="footer__column-links">
+              <li><a href="index.html" class="footer__column-link">Home</a></li>
+              <li><a href="index.html#projects" class="footer__column-link">Projects</a></li>
+              <li><a href="about.html" class="footer__column-link footer__column-link--active">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Social</h3>
+            <ul class="footer__column-links">
+              <li><a href="#" class="footer__column-link">GitHub</a></li>
+              <li><a href="#" class="footer__column-link">LinkedIn</a></li>
+              <li><a href="#" class="footer__column-link">X</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Other</h3>
+            <ul class="footer__column-links">
+              <li><a href="#" class="footer__column-link">Resume</a></li>
+              <li><a href="#" class="footer__column-link">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title text-caption">Contact</h3>
+            <ul class="footer__column-links">
+              <li><a href="mailto:hello@portfolio.dev" class="footer__column-link">hello@portfolio.dev</a></li>
+              <li><a href="contact.html" class="footer__column-link">Book a call</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        <p class="text-caption">© 2026 Mia Suzuki. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link text-caption">Terms of Service</a>
+          <a href="#" class="footer__legal-link text-caption">Privacy Policy</a>
+        </div>
+        <a href="#top" class="footer__back-top text-label" id="back-to-top">
+          Back to top
+          <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+
+      <p class="footer__watermark" aria-hidden="true">Mia Suzuki</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

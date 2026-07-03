@@ -688,7 +688,8 @@ ul {
 }
 
 .project-card__media--orb::before,
-.hero__ticker-placeholder.project-card__media--orb::before {
+.hero__ticker-placeholder.project-card__media--orb::before,
+.project-page__placeholder.project-card__media--orb::before {
   content: "";
   position: absolute;
   top: 8%;
@@ -702,7 +703,8 @@ ul {
 }
 
 .project-card__media--orb-alt::before,
-.hero__ticker-placeholder.project-card__media--orb-alt::before {
+.hero__ticker-placeholder.project-card__media--orb-alt::before,
+.project-page__placeholder.project-card__media--orb-alt::before {
   content: "";
   position: absolute;
   bottom: 10%;
@@ -716,7 +718,8 @@ ul {
 }
 
 .project-card__media--gradient,
-.hero__ticker-placeholder.project-card__media--gradient {
+.hero__ticker-placeholder.project-card__media--gradient,
+.project-page__placeholder.project-card__media--gradient {
   background: linear-gradient(
     135deg,
     color-mix(in srgb, var(--accent-default) 30%, var(--bg-disabled)) 0%,
@@ -726,7 +729,8 @@ ul {
 }
 
 .project-card__media--gradient-alt,
-.hero__ticker-placeholder.project-card__media--gradient-alt {
+.hero__ticker-placeholder.project-card__media--gradient-alt,
+.project-page__placeholder.project-card__media--gradient-alt {
   background: linear-gradient(
     160deg,
     var(--bg-disabled) 0%,
@@ -1449,6 +1453,10 @@ body.nav-open {
   padding-block: var(--space-8) var(--space-9);
 }
 
+.project-page > .container {
+  max-width: var(--content-max);
+}
+
 .project-page__back {
   display: inline-flex;
   align-items: center;
@@ -1463,48 +1471,46 @@ body.nav-open {
 }
 
 .project-page__hero-block {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--space-6);
   margin-bottom: var(--space-8);
-}
-
-@media (min-width: 1024px) {
-  .project-page__hero-block {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: var(--space-8);
-  }
 }
 
 .project-page__hero-copy {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
-  max-width: 56ch;
+  max-width: 40rem;
 }
 
 .project-page__title {
   color: var(--fg-primary);
 }
 
+.project-page__title.text-display {
+  font-size: var(--text-h1);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
 .project-page__subtitle {
   color: var(--fg-muted);
-  max-width: 48ch;
+  max-width: 38rem;
 }
 
 .project-page__details {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 36rem;
 }
 
 @media (min-width: 640px) {
   .project-page__details {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-5);
+    max-width: none;
   }
 }
 
@@ -1516,27 +1522,38 @@ body.nav-open {
   margin-top: var(--space-2);
 }
 
+.project-page__hero-copy .project-page__details {
+  margin-top: var(--space-2);
+}
+
 .project-page__hero-media {
+  width: 100%;
   margin-bottom: var(--space-8);
 }
 
 .project-page__placeholder {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-md);
   background-color: var(--bg-disabled);
 }
 
+.project-page__placeholder[class*="project-card__media--"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-page__placeholder--hero {
   aspect-ratio: 21 / 9;
+  min-height: 12rem;
 }
 
 .project-page__placeholder--wide {
   aspect-ratio: 16 / 9;
+  min-height: 10rem;
 }
 
 .project-page__placeholder--tall {
@@ -1559,13 +1576,20 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   gap: var(--space-8);
+  max-width: 40rem;
+}
+
+@media (min-width: 768px) {
+  .project-page__body {
+    max-width: none;
+  }
 }
 
 .project-page__intro {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  max-width: 720px;
+  max-width: 45rem;
 }
 
 .project-page__intro .text-body {
@@ -1576,6 +1600,15 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+  max-width: 45rem;
+}
+
+.project-page__section--open,
+.project-page__section:has(.project-page__gallery),
+.project-page__section:has(.project-page__panel),
+.project-page__section:has(.project-page__placeholder--wide),
+.project-page__section:has(.project-page__placeholder--moodboard) {
+  max-width: none;
 }
 
 .project-page__section--open {
@@ -1584,7 +1617,7 @@ body.nav-open {
 
 .project-page__section .text-body {
   color: var(--fg-muted);
-  max-width: 720px;
+  max-width: 45rem;
 }
 
 .project-page__stepper {
@@ -1592,8 +1625,11 @@ body.nav-open {
   flex-wrap: nowrap;
   gap: var(--space-2);
   overflow-x: auto;
-  padding-bottom: var(--space-2);
+  padding: 0 0 var(--space-2);
+  margin: 0;
+  list-style: none;
   border-bottom: var(--border-width-hairline) solid var(--border-default);
+  max-width: none;
 }
 
 .project-page__step {
@@ -1634,6 +1670,7 @@ body.nav-open {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gutter);
+  max-width: none;
 }
 
 @media (min-width: 768px) {
@@ -1667,6 +1704,7 @@ body.nav-open {
   background-color: var(--bg-surface);
   border: var(--border-width-hairline) solid var(--border-default);
   border-radius: var(--radius-md);
+  max-width: none;
 }
 
 @media (min-width: 768px) {
@@ -1720,28 +1758,47 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   gap: var(--gutter);
+  width: 100%;
+  max-width: none;
 }
 
 .project-page__gallery .project-page__placeholder--wide {
   aspect-ratio: 16 / 10;
+  min-height: 12rem;
 }
 
 .project-page__deploy {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  max-width: 720px;
+  max-width: 45rem;
 }
 
 .project-page__reflection {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
-  max-width: 720px;
+  max-width: 45rem;
   padding-top: var(--space-8);
   border-top: var(--border-width-hairline) solid var(--border-default);
 }
 
 .project-page__reflection .text-body {
   color: var(--fg-muted);
+}
+
+@media (min-width: 768px) {
+  .project-page__placeholder--hero {
+    min-height: 16rem;
+  }
+
+  .project-page__placeholder--wide {
+    min-height: 14rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-page__placeholder--hero {
+    min-height: 20rem;
+  }
 }

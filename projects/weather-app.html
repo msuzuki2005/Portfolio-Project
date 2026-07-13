@@ -70,22 +70,26 @@
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Role</dt>
-              <dd class="text-body">Designer & Developer</dd>
+              <dd class="text-body">Designer, Developer</dd>
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Tools</dt>
-              <dd class="text-body">HTML · CSS · JavaScript</dd>
+              <dd class="text-body">Figma Make · Cursor · Netlify</dd>
             </div>
           </dl>
             <div class="project-page__hero-cta">
-              <a href="#" class="btn btn--primary btn--lg">View live site</a>
+              <a href="https://dashing-strudel-8799dd.netlify.app/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">View live site</a>
             </div>
           </div>
 
           <div class="project-page__hero-media">
-            <div class="project-page__placeholder project-page__placeholder--hero project-card__media--orb-alt" role="img" aria-label="Hero image placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Hero image</span>
-            </div>
+            <img
+              class="project-page__hero-image"
+              src="../weather-app/images/hero-phone.png"
+              alt="Hand holding a phone showing the Weather App Paris dashboard with current snowy conditions"
+              width="1536"
+              height="1024"
+            >
           </div>
         </header>
 
@@ -122,9 +126,9 @@
                     <span class="project-page__step-num" aria-hidden="true">2</span>
                     <span class="text-caption">Ideate</span>
                   </button>
-                  <button type="button" class="project-page__step" role="tab" id="process-tab-design-system" aria-selected="false" aria-controls="process-panel-design-system" tabindex="-1">
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-refining" aria-selected="false" aria-controls="process-panel-refining" tabindex="-1">
                     <span class="project-page__step-num" aria-hidden="true">3</span>
-                    <span class="text-caption">Design System</span>
+                    <span class="text-caption">Refining</span>
                   </button>
                   <button type="button" class="project-page__step" role="tab" id="process-tab-prototyping" aria-selected="false" aria-controls="process-panel-prototyping" tabindex="-1">
                     <span class="project-page__step-num" aria-hidden="true">4</span>
@@ -134,19 +138,19 @@
               <div class="project-page__process-panels">
                 <div class="project-page__process-panel" role="tabpanel" id="process-panel-define" aria-labelledby="process-tab-define" data-process-index="0">
                   <p class="text-caption">Define</p>
-                  <p class="text-body">Prioritized location search, current conditions, and hourly strip.</p>
+                  <p class="text-body">Mapped user flows/tasks, descriptive web structure, and site map.</p>
                 </div>
                 <div class="project-page__process-panel" role="tabpanel" id="process-panel-ideate" aria-labelledby="process-tab-ideate" data-process-index="1" hidden>
                   <p class="text-caption">Ideate</p>
-                  <p class="text-body">Sketched mobile-first layouts with emphasis on typographic hierarchy.</p>
+                  <p class="text-body">Gathered references for UI Design.</p>
                 </div>
-                <div class="project-page__process-panel" role="tabpanel" id="process-panel-design-system" aria-labelledby="process-tab-design-system" data-process-index="2" hidden>
-                  <p class="text-caption">Design System</p>
-                  <p class="text-body">Defined colors, typography, and reusable UI components for a consistent interface.</p>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-refining" aria-labelledby="process-tab-refining" data-process-index="2" hidden>
+                  <p class="text-caption">Refining</p>
+                  <p class="text-body">Designed the UI of the app and prototyped the first userflow in Figma Make.</p>
                 </div>
                 <div class="project-page__process-panel" role="tabpanel" id="process-panel-prototyping" aria-labelledby="process-tab-prototyping" data-process-index="3" hidden>
                   <p class="text-caption">Prototyping</p>
-                  <p class="text-body">Built a working prototype connected to a weather API.</p>
+                  <p class="text-body">Continued building a working prototype in Cursor connected to a weather API.</p>
                 </div>
               </div>
                 </div>
@@ -159,95 +163,197 @@
             </div>
           </section>
 
-          <section class="project-page__section" aria-labelledby="sketching-heading">
-            <h2 class="text-h2" id="sketching-heading">Sketching</h2>
-            <p class="text-body">Early sketches explored how to layer current weather, hourly trends, and a seven-day summary without overwhelming the viewport.</p>
-            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Sketch gallery placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Sketches</span>
+          <section class="project-page__section" aria-labelledby="wireframes-heading">
+            <h2 class="text-h2" id="wireframes-heading">Defining the Project</h2>
+            <p class="text-body">Descriptive web structure, user flows/tasks, and site map.</p>
+            <div class="project-page__carousel" data-carousel aria-roledescription="carousel" aria-label="Project definition diagrams">
+              <div class="project-page__carousel-viewport">
+                <ul class="project-page__carousel-track">
+                  <li class="project-page__carousel-slide is-active" data-carousel-slide>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge descriptive web structure diagram">
+                      <img
+                        src="../weather-app/images/ux/01-web-structure.png"
+                        alt="Descriptive web structure outlining Dashboard, Weather Data, and Global Weather Map pages"
+                        width="1536"
+                        height="1024"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge check the weather user flow">
+                      <img
+                        src="../weather-app/images/ux/02-flow-check-weather.png"
+                        alt="User flow diagram for checking the weather via current location or search"
+                        width="1536"
+                        height="1024"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge weather map user flow">
+                      <img
+                        src="../weather-app/images/ux/03-flow-weather-map.png"
+                        alt="User flow diagram for using the precipitation weather map"
+                        width="1536"
+                        height="1024"
+                      >
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="project-page__carousel-controls">
+                <button type="button" class="project-page__carousel-arrow" data-carousel-prev aria-label="Previous diagram">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="project-page__carousel-status text-caption" data-carousel-status aria-live="polite">1 / 3</p>
+                <button type="button" class="project-page__carousel-arrow" data-carousel-next aria-label="Next diagram">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
             </div>
           </section>
 
           <section class="project-page__section" aria-labelledby="visual-style-heading">
             <h2 class="text-h2" id="visual-style-heading">Visual Style Development</h2>
             <p class="text-caption">Moodboard</p>
-            <div class="project-page__placeholder project-page__placeholder--moodboard project-card__media--gradient-alt" role="img" aria-label="Moodboard placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Moodboard</span>
-            </div>
+            <img
+              class="project-page__moodboard"
+              src="../weather-app/images/moodboard.png"
+              alt="Weather app moodboard with glass weather icons, condition tiles, and mobile UI references"
+              width="1238"
+              height="777"
+            >
           </section>
 
-          <section class="project-page__section" aria-labelledby="style-guide-heading">
-            <h2 class="text-h2" id="style-guide-heading">Design System / Style Guide</h2>
-            <div class="project-page__panel project-page__style-guide">
-              <div>
-                <p class="text-caption">Colors</p>
-                <div class="project-page__swatches">
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--bg-base);"></span>
-                    <span class="text-caption">Base</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--accent-default);"></span>
-                    <span class="text-caption">Accent</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--feedback-info);"></span>
-                    <span class="text-caption">Info</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--bg-disabled);"></span>
-                    <span class="text-caption">Muted</span>
-                  </div>
-                </div>
-              </div>
-              <div class="project-page__type-samples">
-                <p class="text-caption">Typography</p>
-                <p class="text-h2">Albert Sans — Headlines</p>
-                <p class="text-body">Inter — Body and UI labels</p>
-              </div>
-              <div>
-                <p class="text-caption">Components</p>
-                <div class="project-page__components">
-                  <button type="button" class="btn btn--primary">Search</button>
-                  <button type="button" class="btn btn--outline">Saved</button>
-                  <span class="text-label">Hourly</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="project-page__section" aria-labelledby="wireframes-heading">
-            <h2 class="text-h2" id="wireframes-heading">UI/UX Development</h2>
-            <p class="text-body">Wireframes mapped the search flow, loading states, and error handling for invalid locations or API timeouts.</p>
-            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb" role="img" aria-label="Wireframes placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Wireframes</span>
-            </div>
+          <section class="project-page__section" aria-labelledby="refining-heading">
+            <h2 class="text-h2" id="refining-heading">Refining</h2>
+            <p class="text-body">UI Design using Figma Make.</p>
+            <img
+              class="project-page__sketch"
+              src="../weather-app/images/refining.png"
+              alt="WeatherApp Figma Make prototype showing Paris dashboard with current conditions and hourly forecast"
+              width="1918"
+              height="967"
+            >
           </section>
 
           <section class="project-page__section" aria-labelledby="gallery-heading">
-            <h2 class="text-h2" id="gallery-heading">Gallery</h2>
-            <div class="project-page__gallery">
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb-alt" role="img" aria-label="Screen mockup 1 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Screen 01</span>
+            <h2 class="text-h2" id="gallery-heading">Mockups</h2>
+            <div class="project-page__mockups">
+              <figure class="device-mockup device-mockup--desktop">
+                <button type="button" class="device-mockup__trigger" data-lightbox-trigger aria-label="Enlarge desktop Paris weather mockup">
+                  <span class="device-mockup__browser" aria-hidden="true">
+                    <span class="device-mockup__dots">
+                      <span></span><span></span><span></span>
+                    </span>
+                    <span class="device-mockup__url">weatherapp.app/paris</span>
+                  </span>
+                  <span class="device-mockup__screen">
+                    <img
+                      src="../weather-app/images/mockups/desktop-dashboard.png"
+                      alt="Desktop WeatherApp dashboard for Paris with current conditions and hourly forecast"
+                      width="1167"
+                      height="711"
+                    >
+                  </span>
+                </button>
+                <figcaption class="text-caption">Desktop — Paris forecast</figcaption>
+              </figure>
+
+              <figure class="device-mockup device-mockup--mobile device-mockup--mobile-weather">
+                <button type="button" class="device-mockup__trigger" data-lightbox-trigger aria-label="Enlarge mobile Paris weather mockup">
+                  <span class="device-mockup__phone" aria-hidden="true">
+                    <span class="device-mockup__btn device-mockup__btn--silent"></span>
+                    <span class="device-mockup__btn device-mockup__btn--volume-up"></span>
+                    <span class="device-mockup__btn device-mockup__btn--volume-down"></span>
+                    <span class="device-mockup__btn device-mockup__btn--power"></span>
+                    <span class="device-mockup__bezel">
+                      <span class="device-mockup__island"></span>
+                      <span class="device-mockup__screen device-mockup__screen--weather">
+                        <img
+                          src="../weather-app/images/mockups/mobile-dashboard.png"
+                          alt="Mobile WeatherApp Paris forecast with current conditions and hourly strip"
+                          width="312"
+                          height="713"
+                        >
+                      </span>
+                      <span class="device-mockup__home"></span>
+                    </span>
+                  </span>
+                </button>
+                <figcaption class="text-caption">Mobile — Paris forecast</figcaption>
+              </figure>
+            </div>
+
+            <div class="project-page__carousel" data-carousel aria-roledescription="carousel" aria-label="Weather App prototype screens">
+              <div class="project-page__carousel-viewport">
+                <ul class="project-page__carousel-track">
+                  <li class="project-page__carousel-slide is-active" data-carousel-slide>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge Paris dashboard screen">
+                      <img
+                        src="../weather-app/images/screens/01-home.png"
+                        alt="WeatherApp Paris dashboard with current snowy conditions, metrics, and hourly forecast"
+                        width="1167"
+                        height="711"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge 7-day forecast screen">
+                      <img
+                        src="../weather-app/images/screens/02-paris.png"
+                        alt="WeatherApp 7-day forecast and hourly temperature chart"
+                        width="1165"
+                        height="715"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge global weather map screen">
+                      <img
+                        src="../weather-app/images/screens/03-global-map.png"
+                        alt="WeatherApp global weather map with New York selected and intensity legend"
+                        width="1170"
+                        height="713"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge all cities screen">
+                      <img
+                        src="../weather-app/images/screens/04-all-cities.png"
+                        alt="WeatherApp all cities grid with New York selected and worldwide forecasts"
+                        width="1170"
+                        height="712"
+                      >
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Screen mockup 2 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Screen 02</span>
-              </div>
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient-alt" role="img" aria-label="Screen mockup 3 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Screen 03</span>
+              <div class="project-page__carousel-controls">
+                <button type="button" class="project-page__carousel-arrow" data-carousel-prev aria-label="Previous screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="project-page__carousel-status text-caption" data-carousel-status aria-live="polite">1 / 4</p>
+                <button type="button" class="project-page__carousel-arrow" data-carousel-next aria-label="Next screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </section>
 
           <section class="project-page__deploy" aria-labelledby="deployment-heading">
             <h2 class="text-h2" id="deployment-heading">Deployment</h2>
-            <p class="text-body">The app was deployed as a static site on Netlify with environment variables securing the API key.</p>
-            <a href="#" class="btn btn--outline">Visit the website</a>
-          </section>
-
-          <section class="project-page__reflection" aria-labelledby="reflection-heading">
-            <h2 class="text-h2" id="reflection-heading">Reflection</h2>
-            <p class="text-body">Building Weather App reinforced how much clarity comes from restraint — showing less data, but showing it better, made the experience feel more trustworthy.</p>
-            <p class="text-body">Next steps would include geolocation support and dynamic backgrounds that shift with conditions.</p>
+            <p class="text-body">The prototype was built with Cursor and Figma Make. Deployed using Netlify.</p>
+            <a href="https://dashing-strudel-8799dd.netlify.app/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visit the website</a>
           </section>
 
         </div>

@@ -240,4 +240,239 @@
       event.preventDefault();
     });
   }
+
+  const processTabsRoots = document.querySelectorAll("[data-process-tabs]");
+
+  processTabsRoots.forEach(function (root) {
+    const tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    const panels = Array.prototype.slice.call(root.querySelectorAll('[role="tabpanel"]'));
+    const prevButton = root.querySelector("[data-process-prev]");
+    const nextButton = root.querySelector("[data-process-next]");
+
+    if (!tabs.length || !panels.length) return;
+
+    function getActiveIndex() {
+      return tabs.findIndex(function (tab) {
+        return tab.getAttribute("aria-selected") === "true";
+      });
+    }
+
+    function updateArrowState(activeIndex) {
+      if (prevButton) {
+        prevButton.disabled = activeIndex <= 0;
+      }
+      if (nextButton) {
+        nextButton.disabled = activeIndex >= tabs.length - 1;
+      }
+    }
+
+    function activateTab(nextTab) {
+      const nextIndex = tabs.indexOf(nextTab);
+      if (nextIndex < 0) return;
+
+      tabs.forEach(function (tab, index) {
+        const isActive = index === nextIndex;
+        tab.classList.toggle("project-page__step--active", isActive);
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
+        tab.setAttribute("tabindex", isActive ? "0" : "-1");
+      });
+
+      panels.forEach(function (panel, index) {
+        if (index === nextIndex) {
+          panel.removeAttribute("hidden");
+        } else {
+          panel.setAttribute("hidden", "");
+        }
+      });
+
+      updateArrowState(nextIndex);
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        activateTab(tab);
+      });
+
+      tab.addEventListener("keydown", function (event) {
+        const currentIndex = tabs.indexOf(tab);
+        let nextIndex = currentIndex;
+
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          nextIndex = Math.min(currentIndex + 1, tabs.length - 1);
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          nextIndex = Math.max(currentIndex - 1, 0);
+        } else if (event.key === "Home") {
+          nextIndex = 0;
+        } else if (event.key === "End") {
+          nextIndex = tabs.length - 1;
+        } else {
+          return;
+        }
+
+        event.preventDefault();
+        tabs[nextIndex].focus();
+        activateTab(tabs[nextIndex]);
+      });
+    });
+
+    if (prevButton) {
+      prevButton.addEventListener("click", function () {
+        const activeIndex = getActiveIndex();
+        if (activeIndex > 0) {
+          activateTab(tabs[activeIndex - 1]);
+        }
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", function () {
+        const activeIndex = getActiveIndex();
+        if (activeIndex < tabs.length - 1) {
+          activateTab(tabs[activeIndex + 1]);
+        }
+      });
+    }
+
+    updateArrowState(Math.max(getActiveIndex(), 0));
+  });
+
+  const carouselRoots = document.querySelectorAll("[data-carousel]");
+
+  carouselRoots.forEach(function (root) {
+    const slides = Array.prototype.slice.call(root.querySelectorAll("[data-carousel-slide]"));
+    const prevButton = root.querySelector("[data-carousel-prev]");
+    const nextButton = root.querySelector("[data-carousel-next]");
+    const status = root.querySelector("[data-carousel-status]");
+
+    if (slides.length < 2) return;
+
+    let activeIndex = slides.findIndex(function (slide) {
+      return slide.classList.contains("is-active");
+    });
+
+    if (activeIndex < 0) activeIndex = 0;
+
+    function updateCarousel(nextIndex) {
+      if (nextIndex < 0 || nextIndex >= slides.length) return;
+
+      activeIndex = nextIndex;
+
+      slides.forEach(function (slide, index) {
+        const isActive = index === activeIndex;
+        slide.classList.toggle("is-active", isActive);
+        if (isActive) {
+          slide.removeAttribute("hidden");
+        } else {
+          slide.setAttribute("hidden", "");
+        }
+      });
+
+      if (status) {
+        status.textContent = activeIndex + 1 + " / " + slides.length;
+      }
+
+      if (prevButton) {
+        prevButton.disabled = activeIndex <= 0;
+      }
+
+      if (nextButton) {
+        nextButton.disabled = activeIndex >= slides.length - 1;
+      }
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener("click", function () {
+        updateCarousel(activeIndex - 1);
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", function () {
+        updateCarousel(activeIndex + 1);
+      });
+    }
+
+    root.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        updateCarousel(activeIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        updateCarousel(activeIndex + 1);
+      }
+    });
+
+    updateCarousel(activeIndex);
+  });
+
+  const lightboxTriggers = document.querySelectorAll("[data-lightbox-trigger]");
+
+  if (lightboxTriggers.length) {
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.setAttribute("hidden", "");
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Enlarged diagram");
+    lightbox.innerHTML =
+      '<button type="button" class="lightbox__close" data-lightbox-close aria-label="Close enlarged image">' +
+      '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">' +
+      '<path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>' +
+      "</svg>" +
+      "</button>" +
+      '<div class="lightbox__dialog">' +
+      '<img class="lightbox__image" alt="">' +
+      "</div>";
+
+    document.body.appendChild(lightbox);
+
+    const lightboxImage = lightbox.querySelector(".lightbox__image");
+    const lightboxClose = lightbox.querySelector("[data-lightbox-close]");
+    let lastTrigger = null;
+
+    function openLightbox(trigger) {
+      const image = trigger.querySelector("img");
+      if (!image || !lightboxImage) return;
+
+      lastTrigger = trigger;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || "";
+      lightbox.removeAttribute("hidden");
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.setAttribute("hidden", "");
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.removeAttribute("src");
+      lightboxImage.alt = "";
+
+      if (lastTrigger) {
+        lastTrigger.focus();
+        lastTrigger = null;
+      }
+    }
+
+    lightboxTriggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        openLightbox(trigger);
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !lightbox.hasAttribute("hidden")) {
+        event.preventDefault();
+        closeLightbox();
+      }
+    });
+  }
 })();

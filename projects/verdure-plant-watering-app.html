@@ -7,9 +7,10 @@
   <title>Verdure: Plant Watering App — Mia Suzuki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/verdure-design-system.css?v=1">
 </head>
 <body>
 
@@ -65,29 +66,33 @@
             </p>
           <dl class="project-page__details">
             <div class="project-page__detail">
-              <dt class="text-caption">Duration</dt>
-              <dd class="text-body">6 weeks</dd>
+              <dt class="text-caption">Client</dt>
+              <dd class="text-body">ARTGR 4840/5840</dd>
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Role</dt>
-              <dd class="text-body">Lead Designer</dd>
+              <dd class="text-body">Designer, Developer</dd>
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Tools</dt>
-              <dd class="text-body">Figma · React · Tailwind</dd>
+              <dd class="text-body">Cursor · Netlify</dd>
             </div>
           </dl>
             <div class="project-page__hero-cta">
-              <a href="#" class="btn btn--primary btn--lg">View live site</a>
+              <a href="https://coruscating-meerkat-706d10.netlify.app/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">View live site</a>
             </div>
           </div>
-        </header>
 
-        <div class="project-page__hero-media">
-          <div class="project-page__placeholder project-page__placeholder--hero project-card__media--gradient" role="img" aria-label="Hero image placeholder">
-            <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Hero image</span>
+          <div class="project-page__hero-media">
+            <img
+              class="project-page__hero-image"
+              src="../verdure-plant-watering-app/images/hero-laptop.png"
+              alt="Laptop on a mossy rock showing the Verdure watering calendar against a sage green background"
+              width="1536"
+              height="1024"
+            >
           </div>
-        </div>
+        </header>
 
         <div class="project-page__body">
 
@@ -105,137 +110,366 @@
 
           <section class="project-page__section project-page__section--open" aria-labelledby="process-heading">
             <h2 class="text-h2" id="process-heading">Process</h2>
-            <ol class="project-page__stepper" aria-label="Design process phases">
-              <li class="project-page__step project-page__step--active">
-                <span class="project-page__step-num" aria-hidden="true">1</span>
-                <span class="text-caption">Research</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">2</span>
-                <span class="text-caption">Define</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">3</span>
-                <span class="text-caption">Ideate</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">4</span>
-                <span class="text-caption">Prototype</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">5</span>
-                <span class="text-caption">Test</span>
-              </li>
-            </ol>
-            <div class="project-page__process-cards">
-              <div class="project-page__process-card">
-                <p class="text-caption">Research</p>
-                <p class="text-body">Surveyed plant owners and analyzed competitor onboarding flows.</p>
+            <div class="project-page__process" data-process-tabs>
+              <div class="project-page__process-nav">
+                <button type="button" class="project-page__process-arrow" data-process-prev aria-label="Previous process phase">
+                  <svg class="project-page__process-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <div class="project-page__process-main">
+                <div class="project-page__stepper project-page__stepper--three" role="tablist" aria-label="Design process phases">
+                  <button type="button" class="project-page__step project-page__step--active" role="tab" id="process-tab-ideate" aria-selected="true" aria-controls="process-panel-ideate" tabindex="0">
+                    <span class="project-page__step-num" aria-hidden="true">1</span>
+                    <span class="text-caption">Ideate</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-design-system" aria-selected="false" aria-controls="process-panel-design-system" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">2</span>
+                    <span class="text-caption">Design System</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-prototyping" aria-selected="false" aria-controls="process-panel-prototyping" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">3</span>
+                    <span class="text-caption">Prototyping</span>
+                  </button>
+                </div>
+              <div class="project-page__process-panels project-page__process-panels--three">
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-ideate" aria-labelledby="process-tab-ideate" data-process-index="0">
+                  <p class="text-caption">Ideate</p>
+                  <p class="text-body">Trying different variations and fine-tuning the styles for the project.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-design-system" aria-labelledby="process-tab-design-system" data-process-index="1" hidden>
+                  <p class="text-caption">Design System</p>
+                  <p class="text-body">Defined colors, typography, and reusable UI components for a consistent interface.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-prototyping" aria-labelledby="process-tab-prototyping" data-process-index="2" hidden>
+                  <p class="text-caption">Prototyping</p>
+                  <p class="text-body">Created a usable prototype using Cursor. App hosting was done with Netlify.</p>
+                </div>
               </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Define</p>
-                <p class="text-body">Defined personas around casual collectors and first-time plant parents.</p>
+                </div>
+                <button type="button" class="project-page__process-arrow" data-process-next aria-label="Next process phase">
+                  <svg class="project-page__process-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Ideate</p>
-                <p class="text-body">Explored dashboard layouts centered on upcoming care tasks.</p>
-              </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Prototype</p>
-                <p class="text-body">Tested reminder timing and plant profile setup with 5 participants.</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="project-page__section" aria-labelledby="sketching-heading">
-            <h2 class="text-h2" id="sketching-heading">Sketching</h2>
-            <p class="text-body">Initial sketches explored a home screen focused on today's tasks, with quick actions for water, mist, and rotate.</p>
-            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb-alt" role="img" aria-label="Sketch gallery placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Sketches</span>
             </div>
           </section>
 
           <section class="project-page__section" aria-labelledby="visual-style-heading">
             <h2 class="text-h2" id="visual-style-heading">Visual Style Development</h2>
             <p class="text-caption">Moodboard</p>
-            <div class="project-page__placeholder project-page__placeholder--moodboard project-card__media--gradient-alt" role="img" aria-label="Moodboard placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Moodboard</span>
-            </div>
-          </section>
-
-          <section class="project-page__section" aria-labelledby="style-guide-heading">
-            <h2 class="text-h2" id="style-guide-heading">Design System / Style Guide</h2>
-            <div class="project-page__panel project-page__style-guide">
-              <div>
-                <p class="text-caption">Colors</p>
-                <div class="project-page__swatches">
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--bg-base);"></span>
-                    <span class="text-caption">Base</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--accent-default);"></span>
-                    <span class="text-caption">Accent</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--feedback-success);"></span>
-                    <span class="text-caption">Success</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--bg-disabled);"></span>
-                    <span class="text-caption">Muted</span>
-                  </div>
-                </div>
-              </div>
-              <div class="project-page__type-samples">
-                <p class="text-caption">Typography</p>
-                <p class="text-h2">Albert Sans — Headlines</p>
-                <p class="text-body">Inter — Body and UI labels</p>
-              </div>
-              <div>
-                <p class="text-caption">Components</p>
-                <div class="project-page__components">
-                  <button type="button" class="btn btn--primary">Water now</button>
-                  <button type="button" class="btn btn--outline">Add plant</button>
-                  <span class="text-label">Care due</span>
-                </div>
-              </div>
-            </div>
+            <img
+              class="project-page__moodboard"
+              src="../verdure-plant-watering-app/images/moodboard.png"
+              alt="Verdure moodboard with nature-inspired glassmorphism UI references"
+              width="1277"
+              height="752"
+            >
           </section>
 
           <section class="project-page__section" aria-labelledby="wireframes-heading">
-            <h2 class="text-h2" id="wireframes-heading">UI/UX Development</h2>
-            <p class="text-body">Wireframes mapped onboarding, plant library browsing, and the daily care dashboard with notification states.</p>
-            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb" role="img" aria-label="Wireframes placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Wireframes</span>
+            <h2 class="text-h2" id="wireframes-heading">Style Ideation</h2>
+            <p class="text-body">Fine-tuning visual styles.</p>
+            <div class="project-page__carousel" data-carousel aria-roledescription="carousel" aria-label="Verdure style ideation screens">
+              <div class="project-page__carousel-viewport">
+                <ul class="project-page__carousel-track">
+                  <li class="project-page__carousel-slide is-active" data-carousel-slide>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge watering dashboard screen">
+                      <img
+                        src="../verdure-plant-watering-app/images/ux/01-dashboard.png"
+                        alt="Verdure watering dashboard with glass hero panel and plant stats"
+                        width="1391"
+                        height="778"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge glass watering calendar screen">
+                      <img
+                        src="../verdure-plant-watering-app/images/ux/02-calendar-glass.png"
+                        alt="Verdure glassmorphism watering calendar over botanical background"
+                        width="1387"
+                        height="780"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge light watering calendar screen">
+                      <img
+                        src="../verdure-plant-watering-app/images/ux/03-calendar-light.png"
+                        alt="Verdure light-mode watering calendar with watered and scheduled statuses"
+                        width="1388"
+                        height="780"
+                      >
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="project-page__carousel-controls">
+                <button type="button" class="project-page__carousel-arrow" data-carousel-prev aria-label="Previous screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="project-page__carousel-status text-caption" data-carousel-status aria-live="polite">1 / 3</p>
+                <button type="button" class="project-page__carousel-arrow" data-carousel-next aria-label="Next screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
             </div>
           </section>
 
+          <section class="project-page__section project-page__section--open" aria-labelledby="style-guide-heading">
+            <h2 class="text-h2" id="style-guide-heading">Design System / Style Guide</h2>
+            <div class="ver-ds" aria-label="Verdure design system guide">
+
+              <div class="ver-ds__block">
+                <p class="ver-ds__label">Colors</p>
+                <div class="ver-ds__swatches">
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #F4F7F4;"></span>
+                    <p class="ver-ds__swatch-name">Mist</p>
+                    <p class="ver-ds__swatch-hex">#F4F7F4</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #FFFFFF;"></span>
+                    <p class="ver-ds__swatch-name">White</p>
+                    <p class="ver-ds__swatch-hex">#FFFFFF</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #1A1F1C;"></span>
+                    <p class="ver-ds__swatch-name">Charcoal</p>
+                    <p class="ver-ds__swatch-hex">#1A1F1C</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #5C6560;"></span>
+                    <p class="ver-ds__swatch-name">Stone</p>
+                    <p class="ver-ds__swatch-hex">#5C6560</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #2D5A3D;"></span>
+                    <p class="ver-ds__swatch-name">Forest</p>
+                    <p class="ver-ds__swatch-hex">#2D5A3D</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #A8C5A0;"></span>
+                    <p class="ver-ds__swatch-name">Sage</p>
+                    <p class="ver-ds__swatch-hex">#A8C5A0</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #C8F090;"></span>
+                    <p class="ver-ds__swatch-name">Lime</p>
+                    <p class="ver-ds__swatch-hex">#C8F090</p>
+                  </div>
+                  <div class="ver-ds__swatch">
+                    <span class="ver-ds__swatch-chip" style="background-color: #0A0F0C;"></span>
+                    <p class="ver-ds__swatch-name">Deep</p>
+                    <p class="ver-ds__swatch-hex">#0A0F0C</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ver-ds__block">
+                <p class="ver-ds__label">Typography</p>
+                <div class="ver-ds__type-stack">
+                  <p class="ver-ds__type-display">Fraunces — Headlines</p>
+                  <p class="ver-ds__type-body">DM Sans — Body and UI labels</p>
+                </div>
+              </div>
+
+              <div class="ver-ds__block">
+                <p class="ver-ds__label">Spacing</p>
+                <div class="ver-ds__spacing">
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 4px;"></span>
+                    <p class="ver-ds__label">4</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 8px;"></span>
+                    <p class="ver-ds__label">8</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 12px;"></span>
+                    <p class="ver-ds__label">12</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 16px;"></span>
+                    <p class="ver-ds__label">16</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 24px;"></span>
+                    <p class="ver-ds__label">24</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 32px;"></span>
+                    <p class="ver-ds__label">32</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 48px;"></span>
+                    <p class="ver-ds__label">48</p>
+                  </div>
+                  <div class="ver-ds__space-item">
+                    <span class="ver-ds__space-bar" style="width: 64px;"></span>
+                    <p class="ver-ds__label">64</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ver-ds__block">
+                <p class="ver-ds__label">Components</p>
+                <div class="ver-ds__controls">
+                  <span class="ver-ds__btn ver-ds__btn--primary">Primary</span>
+                  <span class="ver-ds__btn ver-ds__btn--secondary">Secondary</span>
+                  <span class="ver-ds__btn ver-ds__btn--ghost">Ghost</span>
+                </div>
+                <div class="ver-ds__pills">
+                  <span class="ver-ds__tag ver-ds__tag--category">Category</span>
+                  <span class="ver-ds__tag ver-ds__tag--success">Success</span>
+                  <span class="ver-ds__tag ver-ds__tag--warning">Warning</span>
+                  <span class="ver-ds__tag ver-ds__tag--info">Info</span>
+                  <span class="ver-ds__tag ver-ds__tag--lime">Highlight</span>
+                </div>
+              </div>
+
+              <div class="ver-ds__block">
+                <p class="ver-ds__label">Cards</p>
+                <div class="ver-ds__cards">
+                  <article class="ver-ds__solid-card">
+                    <span class="ver-ds__solid-card-media" aria-hidden="true"></span>
+                    <div class="ver-ds__solid-card-body">
+                      <h4 class="ver-ds__solid-card-title">Monstera Deliciosa</h4>
+                      <p class="ver-ds__solid-card-desc">A leafy tropical favorite with soft elevation and generous padding.</p>
+                      <div class="ver-ds__solid-card-footer">
+                        <p class="ver-ds__solid-card-meta">Care due today</p>
+                        <span class="ver-ds__icon-btn" aria-hidden="true">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <div class="ver-ds__glass-stage">
+                    <article class="ver-ds__glass-card">
+                      <p class="ver-ds__glass-card-eyebrow">Glass panel</p>
+                      <h4 class="ver-ds__glass-card-title">Calm canopy</h4>
+                      <p class="ver-ds__glass-card-body">Frosted surfaces sit over deep greens for immersive marketing and feature moments.</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
           <section class="project-page__section" aria-labelledby="gallery-heading">
-            <h2 class="text-h2" id="gallery-heading">Gallery</h2>
-            <div class="project-page__gallery">
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Screen mockup 1 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Screen 01</span>
+            <h2 class="text-h2" id="gallery-heading">Mockups</h2>
+            <div class="project-page__mockups">
+              <figure class="device-mockup device-mockup--desktop">
+                <button type="button" class="device-mockup__trigger" data-lightbox-trigger aria-label="Enlarge desktop garden mockup">
+                  <span class="device-mockup__browser" aria-hidden="true">
+                    <span class="device-mockup__dots">
+                      <span></span><span></span><span></span>
+                    </span>
+                    <span class="device-mockup__url">verdure.app/garden</span>
+                  </span>
+                  <span class="device-mockup__screen">
+                    <img
+                      src="../verdure-plant-watering-app/images/mockups/desktop-garden.png"
+                      alt="Desktop Your garden screen with plant care countdown cards"
+                      width="1506"
+                      height="922"
+                    >
+                  </span>
+                </button>
+                <figcaption class="text-caption">Desktop — Your garden</figcaption>
+              </figure>
+
+              <figure class="device-mockup device-mockup--mobile">
+                <button type="button" class="device-mockup__trigger" data-lightbox-trigger aria-label="Enlarge mobile watering calendar mockup">
+                  <span class="device-mockup__phone" aria-hidden="true">
+                    <span class="device-mockup__btn device-mockup__btn--silent"></span>
+                    <span class="device-mockup__btn device-mockup__btn--volume-up"></span>
+                    <span class="device-mockup__btn device-mockup__btn--volume-down"></span>
+                    <span class="device-mockup__btn device-mockup__btn--power"></span>
+                    <span class="device-mockup__bezel">
+                      <span class="device-mockup__island"></span>
+                      <span class="device-mockup__screen device-mockup__screen--match-prep">
+                        <img
+                          src="../verdure-plant-watering-app/images/mockups/mobile-calendar.png"
+                          alt="Mobile watering calendar and schedule screen"
+                          width="401"
+                          height="1024"
+                        >
+                      </span>
+                      <span class="device-mockup__home"></span>
+                    </span>
+                  </span>
+                </button>
+                <figcaption class="text-caption">Mobile — Watering calendar</figcaption>
+              </figure>
+            </div>
+
+            <div class="project-page__carousel" data-carousel aria-roledescription="carousel" aria-label="Verdure prototype screens">
+              <div class="project-page__carousel-viewport">
+                <ul class="project-page__carousel-track">
+                  <li class="project-page__carousel-slide is-active" data-carousel-slide>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge watering dashboard screen">
+                      <img
+                        src="../verdure-plant-watering-app/images/screens/01-dashboard.png"
+                        alt="Verdure watering dashboard with glass hero panel and plant stats"
+                        width="1898"
+                        height="968"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge your garden screen">
+                      <img
+                        src="../verdure-plant-watering-app/images/screens/02-garden.png"
+                        alt="Your garden plant cards with watering countdown timers"
+                        width="1902"
+                        height="963"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge watering calendar screen">
+                      <img
+                        src="../verdure-plant-watering-app/images/screens/03-calendar.png"
+                        alt="Watering calendar and schedule panels over botanical background"
+                        width="1897"
+                        height="967"
+                      >
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb-alt" role="img" aria-label="Screen mockup 2 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Screen 02</span>
-              </div>
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient-alt" role="img" aria-label="Screen mockup 3 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Screen 03</span>
+              <div class="project-page__carousel-controls">
+                <button type="button" class="project-page__carousel-arrow" data-carousel-prev aria-label="Previous screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="project-page__carousel-status text-caption" data-carousel-status aria-live="polite">1 / 3</p>
+                <button type="button" class="project-page__carousel-arrow" data-carousel-next aria-label="Next screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </section>
 
           <section class="project-page__deploy" aria-labelledby="deployment-heading">
             <h2 class="text-h2" id="deployment-heading">Deployment</h2>
-            <p class="text-body">The interactive prototype was built with React and Tailwind, then deployed for portfolio review and peer feedback sessions.</p>
-            <a href="#" class="btn btn--outline">Visit the website</a>
-          </section>
-
-          <section class="project-page__reflection" aria-labelledby="reflection-heading">
-            <h2 class="text-h2" id="reflection-heading">Reflection</h2>
-            <p class="text-body">Verdure taught me how much emotional tone matters in utility apps. Small copy changes and softer visual rhythm made users feel supported rather than nagged.</p>
-            <p class="text-body">Future iterations could add plant identification via camera and community care tips from experienced growers.</p>
+            <p class="text-body">The prototype was built with Cursor. Deployed using Netlify.</p>
+            <a href="https://coruscating-meerkat-706d10.netlify.app/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visit the website</a>
           </section>
 
         </div>

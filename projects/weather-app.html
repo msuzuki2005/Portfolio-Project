@@ -65,8 +65,8 @@
             </p>
           <dl class="project-page__details">
             <div class="project-page__detail">
-              <dt class="text-caption">Duration</dt>
-              <dd class="text-body">3 weeks</dd>
+              <dt class="text-caption">Client</dt>
+              <dd class="text-body">ARTGR 4840/5840</dd>
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Role</dt>
@@ -81,13 +81,13 @@
               <a href="#" class="btn btn--primary btn--lg">View live site</a>
             </div>
           </div>
-        </header>
 
-        <div class="project-page__hero-media">
-          <div class="project-page__placeholder project-page__placeholder--hero project-card__media--orb-alt" role="img" aria-label="Hero image placeholder">
-            <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Hero image</span>
+          <div class="project-page__hero-media">
+            <div class="project-page__placeholder project-page__placeholder--hero project-card__media--orb-alt" role="img" aria-label="Hero image placeholder">
+              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Hero image</span>
+            </div>
           </div>
-        </div>
+        </header>
 
         <div class="project-page__body">
 
@@ -105,44 +105,56 @@
 
           <section class="project-page__section project-page__section--open" aria-labelledby="process-heading">
             <h2 class="text-h2" id="process-heading">Process</h2>
-            <ol class="project-page__stepper" aria-label="Design process phases">
-              <li class="project-page__step project-page__step--active">
-                <span class="project-page__step-num" aria-hidden="true">1</span>
-                <span class="text-caption">Research</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">2</span>
-                <span class="text-caption">Define</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">3</span>
-                <span class="text-caption">Ideate</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">4</span>
-                <span class="text-caption">Prototype</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">5</span>
-                <span class="text-caption">Test</span>
-              </li>
-            </ol>
-            <div class="project-page__process-cards">
-              <div class="project-page__process-card">
-                <p class="text-caption">Research</p>
-                <p class="text-body">Reviewed popular weather apps and noted common layout patterns.</p>
+            <div class="project-page__process" data-process-tabs>
+              <div class="project-page__process-nav">
+                <button type="button" class="project-page__process-arrow" data-process-prev aria-label="Previous process phase">
+                  <svg class="project-page__process-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <div class="project-page__process-main">
+                <div class="project-page__stepper" role="tablist" aria-label="Design process phases">
+                  <button type="button" class="project-page__step project-page__step--active" role="tab" id="process-tab-define" aria-selected="true" aria-controls="process-panel-define" tabindex="0">
+                    <span class="project-page__step-num" aria-hidden="true">1</span>
+                    <span class="text-caption">Define</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-ideate" aria-selected="false" aria-controls="process-panel-ideate" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">2</span>
+                    <span class="text-caption">Ideate</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-design-system" aria-selected="false" aria-controls="process-panel-design-system" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">3</span>
+                    <span class="text-caption">Design System</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-prototyping" aria-selected="false" aria-controls="process-panel-prototyping" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">4</span>
+                    <span class="text-caption">Prototyping</span>
+                  </button>
+                </div>
+              <div class="project-page__process-panels">
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-define" aria-labelledby="process-tab-define" data-process-index="0">
+                  <p class="text-caption">Define</p>
+                  <p class="text-body">Prioritized location search, current conditions, and hourly strip.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-ideate" aria-labelledby="process-tab-ideate" data-process-index="1" hidden>
+                  <p class="text-caption">Ideate</p>
+                  <p class="text-body">Sketched mobile-first layouts with emphasis on typographic hierarchy.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-design-system" aria-labelledby="process-tab-design-system" data-process-index="2" hidden>
+                  <p class="text-caption">Design System</p>
+                  <p class="text-body">Defined colors, typography, and reusable UI components for a consistent interface.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-prototyping" aria-labelledby="process-tab-prototyping" data-process-index="3" hidden>
+                  <p class="text-caption">Prototyping</p>
+                  <p class="text-body">Built a working prototype connected to a weather API.</p>
+                </div>
               </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Define</p>
-                <p class="text-body">Prioritized location search, current conditions, and hourly strip.</p>
-              </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Ideate</p>
-                <p class="text-body">Sketched mobile-first layouts with emphasis on typographic hierarchy.</p>
-              </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Prototype</p>
-                <p class="text-body">Built a working prototype connected to a weather API.</p>
+                </div>
+                <button type="button" class="project-page__process-arrow" data-process-next aria-label="Next process phase">
+                  <svg class="project-page__process-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </section>

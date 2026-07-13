@@ -1,14 +1,15 @@
 ---
 title: Meal Prep Planning App
 category: App Design
-excerpt: A mobile-first tool for planning weekly meals, grocery lists, and prep schedules.
+excerpt: A mobile/web app designed for planning weekly meals, prep schedules, and weekly grocery lists all in one place.
 media: orb
 year: "2026"
-role: UI/UX Designer
+role: Designer, Developer
 tools:
+  - Cursor
   - Figma
-  - React
   - Netlify
+  - GitHub
 links:
   - label: View live
     url: "#"

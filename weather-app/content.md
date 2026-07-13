@@ -1,6 +1,6 @@
 ---
 title: Weather App
-category: Web Development
+category: ARTGR 4840/5840
 excerpt: A responsive forecast interface with location search, hourly conditions, and a calm readable layout.
 media: orb-alt
 year: "2026"

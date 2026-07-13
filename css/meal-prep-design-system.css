@@ -1,0 +1,550 @@
+/* Meal Prep Planner — scoped design system guide */
+
+.mepp-ds {
+  --mepp-green-700: #0b592f;
+  --mepp-green-400: #8ca70a;
+  --mepp-orange-500: #df6f3b;
+  --mepp-gold-500: #efb627;
+  --mepp-brown-500: #936440;
+  --mepp-charcoal-900: #232017;
+  --mepp-cream-100: #f0e7d8;
+  --mepp-white: #ffffff;
+
+  --mepp-brand-primary: #0b592f;
+  --mepp-brand-primary-hover: #094a27;
+  --mepp-brand-pressed: #073b1f;
+  --mepp-accent-warm: #df6f3b;
+  --mepp-accent-warm-hover: #c85f2e;
+  --mepp-accent-gold: #efb627;
+  --mepp-support-olive: #8ca70a;
+  --mepp-support-earth: #936440;
+
+  --mepp-surface-canvas: #ffffff;
+  --mepp-surface-card: #ffffff;
+  --mepp-surface-inset: #fbf6ee;
+  --mepp-surface-inverse: #0b592f;
+
+  --mepp-text-primary: #232017;
+  --mepp-text-secondary: #5b554a;
+  --mepp-text-muted: #8c857a;
+  --mepp-text-on-brand: #f0e7d8;
+  --mepp-text-on-accent: #232017;
+
+  --mepp-border-subtle: #e4d8c6;
+  --mepp-border-strong: #232017;
+  --mepp-tint-brand: #e3ede7;
+  --mepp-tint-accent: #f8e5da;
+
+  --mepp-shadow-card: 0 8px 24px rgba(35, 32, 23, 0.08);
+  --mepp-shadow-float: 0 12px 32px rgba(35, 32, 23, 0.12);
+
+  --mepp-font-display: "Gelasio", Georgia, serif;
+  --mepp-font-ui: "Satoshi", system-ui, sans-serif;
+
+  --mepp-space-1: 4px;
+  --mepp-space-2: 8px;
+  --mepp-space-3: 12px;
+  --mepp-space-4: 16px;
+  --mepp-space-5: 20px;
+  --mepp-space-6: 24px;
+  --mepp-space-8: 32px;
+  --mepp-space-10: 40px;
+  --mepp-space-12: 48px;
+  --mepp-space-16: 64px;
+
+  --mepp-radius-md: 12px;
+  --mepp-radius-lg: 20px;
+  --mepp-radius-xl: 24px;
+  --mepp-radius-pill: 9999px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--mepp-space-12);
+  max-width: none;
+  padding: var(--mepp-space-8);
+  background-color: #ffffff;
+  border: 1px solid var(--mepp-border-subtle);
+  border-radius: var(--mepp-radius-xl);
+  color: var(--mepp-text-primary);
+  font-family: var(--mepp-font-ui);
+}
+
+.mepp-ds__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mepp-space-5);
+  padding-bottom: var(--mepp-space-8);
+  border-bottom: 1px solid var(--mepp-border-subtle);
+}
+
+.mepp-ds__block:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.mepp-ds__label {
+  margin: 0;
+  font-family: var(--mepp-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mepp-text-muted);
+}
+
+.mepp-ds__swatches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--mepp-space-5) var(--mepp-space-4);
+}
+
+@media (min-width: 640px) {
+  .mepp-ds__swatches {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mepp-ds__swatches {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.mepp-ds__swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mepp-space-2);
+  min-width: 0;
+}
+
+.mepp-ds__swatch-chip {
+  display: block;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 96px;
+  border-radius: var(--mepp-radius-md);
+  border: 1px solid var(--mepp-border-subtle);
+}
+
+.mepp-ds__swatch-name {
+  margin: 0;
+  font-family: var(--mepp-font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__swatch-hex {
+  margin: 0;
+  font-family: var(--mepp-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mepp-text-muted);
+}
+
+.mepp-ds__type-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mepp-space-3);
+}
+
+.mepp-ds__type-display-lg {
+  margin: 0;
+  font-family: var(--mepp-font-display);
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 38px;
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__type-body {
+  margin: 0;
+  max-width: 36em;
+  font-family: var(--mepp-font-ui);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--mepp-text-secondary);
+}
+
+.mepp-ds__type-label {
+  margin: 0;
+  font-family: var(--mepp-font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__spacing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--mepp-space-4);
+}
+
+.mepp-ds__space-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--mepp-space-2);
+}
+
+.mepp-ds__space-bar {
+  display: block;
+  height: var(--mepp-space-8);
+  background-color: var(--mepp-tint-brand);
+  border: 1px solid var(--mepp-border-subtle);
+  border-radius: 4px;
+}
+
+.mepp-ds__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--mepp-space-3);
+}
+
+.mepp-ds__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mepp-space-2);
+  min-width: 88px;
+  height: 40px;
+  padding-inline: var(--mepp-space-5);
+  border-radius: var(--mepp-radius-pill);
+  font-family: var(--mepp-font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  border: 2px solid transparent;
+  cursor: default;
+}
+
+.mepp-ds__btn--primary {
+  background-color: var(--mepp-brand-primary);
+  color: var(--mepp-text-on-brand);
+}
+
+.mepp-ds__btn--accent {
+  background-color: var(--mepp-accent-warm);
+  color: var(--mepp-text-on-accent);
+}
+
+.mepp-ds__btn--secondary {
+  background-color: transparent;
+  border-color: var(--mepp-border-strong);
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__btn--ghost {
+  background-color: transparent;
+  color: var(--mepp-brand-primary);
+}
+
+.mepp-ds__btn--disabled {
+  background-color: var(--mepp-surface-inset);
+  color: var(--mepp-text-muted);
+  opacity: 0.4;
+}
+
+.mepp-ds__btn-chevron {
+  display: block;
+  flex-shrink: 0;
+}
+
+.mepp-ds__pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--mepp-space-3);
+}
+
+.mepp-ds__tag {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding-inline: 14px;
+  border-radius: var(--mepp-radius-pill);
+  border: 1.5px solid transparent;
+  font-family: var(--mepp-font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.mepp-ds__tag--vegetarian {
+  background-color: var(--mepp-tint-brand);
+  border-color: var(--mepp-brand-primary);
+  color: var(--mepp-brand-primary);
+}
+
+.mepp-ds__tag--vegan {
+  background-color: #eef1d6;
+  border-color: var(--mepp-support-olive);
+  color: #5c6e07;
+}
+
+.mepp-ds__tag--pescatarian,
+.mepp-ds__tag--accent {
+  background-color: var(--mepp-tint-accent);
+  border-color: var(--mepp-accent-warm);
+  color: var(--mepp-accent-warm);
+}
+
+.mepp-ds__tag--gluten-free {
+  background-color: #fbefcc;
+  border-color: #8a6a00;
+  color: #8a6a00;
+}
+
+.mepp-ds__tag--high-protein {
+  background-color: #f6ddd5;
+  border-color: #c2451f;
+  color: #c2451f;
+}
+
+.mepp-ds__tag--meal-prep {
+  background-color: #f3ebe3;
+  border-color: var(--mepp-support-earth);
+  color: var(--mepp-support-earth);
+}
+
+.mepp-ds__tag--olive {
+  background-color: #eef1d6;
+  border-color: var(--mepp-support-olive);
+  color: #5c6e07;
+}
+
+.mepp-ds__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding-inline: 16px;
+  border-radius: var(--mepp-radius-pill);
+  border: 1px solid var(--mepp-border-subtle);
+  background-color: var(--mepp-surface-card);
+  font-family: var(--mepp-font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--mepp-text-primary);
+  white-space: nowrap;
+}
+
+.mepp-ds__pill--popular svg {
+  flex-shrink: 0;
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__cards {
+  display: grid;
+  gap: var(--mepp-space-6);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .mepp-ds__cards {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+}
+
+.mepp-ds__media-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--mepp-surface-card);
+  border-radius: var(--mepp-radius-lg);
+  box-shadow: var(--mepp-shadow-card);
+}
+
+.mepp-ds__media-card-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.mepp-ds__media-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mepp-space-3);
+  padding: var(--mepp-space-5);
+}
+
+.mepp-ds__media-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mepp-space-3);
+}
+
+.mepp-ds__media-card-title {
+  margin: 0;
+  font-family: var(--mepp-font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__media-card-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--mepp-text-muted);
+}
+
+.mepp-ds__media-card-rating svg {
+  color: var(--mepp-accent-gold);
+}
+
+.mepp-ds__media-card-desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--mepp-text-secondary);
+}
+
+.mepp-ds__media-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mepp-space-3);
+  margin-top: var(--mepp-space-1);
+}
+
+.mepp-ds__media-card-author {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mepp-space-2);
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--mepp-text-muted);
+}
+
+.mepp-ds__media-card-author img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mepp-ds__media-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--mepp-space-2);
+}
+
+.mepp-ds__list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mepp-space-3);
+}
+
+.mepp-ds__list-card {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 112px;
+  background-color: var(--mepp-surface-card);
+  border-radius: var(--mepp-radius-xl);
+  box-shadow: var(--mepp-shadow-card);
+}
+
+.mepp-ds__list-card-thumb {
+  width: 112px;
+  min-height: 112px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mepp-ds__list-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: var(--mepp-space-4) var(--mepp-space-5);
+  min-width: 0;
+}
+
+.mepp-ds__list-card-meal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.mepp-ds__list-card-meal--breakfast {
+  color: var(--mepp-brand-primary);
+}
+
+.mepp-ds__list-card-meal--lunch {
+  color: var(--mepp-accent-warm);
+}
+
+.mepp-ds__list-card-meal--dinner {
+  color: var(--mepp-support-olive);
+}
+
+.mepp-ds__list-card-title {
+  margin: 0;
+  font-family: var(--mepp-font-ui);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--mepp-text-primary);
+}
+
+.mepp-ds__list-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--mepp-text-muted);
+}
+
+@media (max-width: 639px) {
+  .mepp-ds__media-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mepp-ds__media-card-tags {
+    justify-content: flex-start;
+  }
+
+  .mepp-ds__list-card-thumb {
+    width: 96px;
+    min-height: 96px;
+  }
+}

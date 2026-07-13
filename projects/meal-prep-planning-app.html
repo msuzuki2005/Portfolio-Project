@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meal Prep Planning App — a mobile-first tool for planning weekly meals, grocery lists, and prep schedules.">
+  <meta name="description" content="A mobile/web app designed for planning weekly meals, prep schedules, and weekly grocery lists all in one place.">
   <title>Meal Prep Planning App — Mia Suzuki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Gelasio:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/meal-prep-design-system.css?v=4">
 </head>
 <body>
 
@@ -61,39 +64,43 @@
             <p class="text-caption">App Design</p>
             <h1 class="project-page__title text-display" id="project-heading">Meal Prep Planning App</h1>
             <p class="project-page__subtitle text-body">
-              A mobile-first tool that helps busy students plan weekly meals, build grocery lists, and stay on schedule with prep reminders.
+              A mobile/web app designed for planning weekly meals, prep schedules, and weekly grocery lists all in one place.
             </p>
           <dl class="project-page__details">
             <div class="project-page__detail">
-              <dt class="text-caption">Duration</dt>
-              <dd class="text-body">4 weeks</dd>
+              <dt class="text-caption">Client</dt>
+              <dd class="text-body">ARTGR 4840/5840</dd>
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Role</dt>
-              <dd class="text-body">UI/UX Designer</dd>
+              <dd class="text-body">Designer, Developer</dd>
             </div>
             <div class="project-page__detail">
               <dt class="text-caption">Tools</dt>
-              <dd class="text-body">Figma · React · Netlify</dd>
+              <dd class="text-body">Cursor · Figma · Netlify · GitHub</dd>
             </div>
           </dl>
             <div class="project-page__hero-cta">
-              <a href="#" class="btn btn--primary btn--lg">View live site</a>
+              <a href="https://meal-prep-planner-app.netlify.app/login" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">View live site</a>
             </div>
           </div>
-        </header>
 
-        <div class="project-page__hero-media">
-          <div class="project-page__placeholder project-page__placeholder--hero project-card__media--orb" role="img" aria-label="Hero image placeholder">
-            <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Hero image</span>
+          <div class="project-page__hero-media">
+            <img
+              class="project-page__hero-image"
+              src="../meal-prep-planning-app/images/hero-phone.png"
+              alt="Hand holding a phone showing the Meal Prep Planner dashboard against a clear blue sky"
+              width="1536"
+              height="1024"
+            >
           </div>
-        </div>
+        </header>
 
         <div class="project-page__body">
 
           <div class="project-page__intro">
             <p class="text-body">
-              Meal Prep Planning App was designed to reduce the friction of weekly meal planning for students and young professionals who want to eat well without spending hours deciding what to cook.
+              This meal prep planning app was designed to reduce the friction of weekly meal planning for people who want to eat well without spending hours deciding what to cook.
             </p>
             <section class="project-page__section" aria-labelledby="challenge-heading">
               <h2 class="text-h2" id="challenge-heading">Challenge</h2>
@@ -105,137 +112,499 @@
 
           <section class="project-page__section project-page__section--open" aria-labelledby="process-heading">
             <h2 class="text-h2" id="process-heading">Process</h2>
-            <ol class="project-page__stepper" aria-label="Design process phases">
-              <li class="project-page__step project-page__step--active">
-                <span class="project-page__step-num" aria-hidden="true">1</span>
-                <span class="text-caption">Research</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">2</span>
-                <span class="text-caption">Define</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">3</span>
-                <span class="text-caption">Ideate</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">4</span>
-                <span class="text-caption">Prototype</span>
-              </li>
-              <li class="project-page__step">
-                <span class="project-page__step-num" aria-hidden="true">5</span>
-                <span class="text-caption">Test</span>
-              </li>
-            </ol>
-            <div class="project-page__process-cards">
-              <div class="project-page__process-card">
-                <p class="text-caption">Research</p>
-                <p class="text-body">Interviewed 6 users about meal planning habits and pain points.</p>
+            <div class="project-page__process" data-process-tabs>
+              <div class="project-page__process-nav">
+                <button type="button" class="project-page__process-arrow" data-process-prev aria-label="Previous process phase">
+                  <svg class="project-page__process-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <div class="project-page__process-main">
+                <div class="project-page__stepper" role="tablist" aria-label="Design process phases">
+                  <button type="button" class="project-page__step project-page__step--active" role="tab" id="process-tab-define" aria-selected="true" aria-controls="process-panel-define" tabindex="0">
+                    <span class="project-page__step-num" aria-hidden="true">1</span>
+                    <span class="text-caption">Define</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-ideate" aria-selected="false" aria-controls="process-panel-ideate" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">2</span>
+                    <span class="text-caption">Ideate</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-design-system" aria-selected="false" aria-controls="process-panel-design-system" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">3</span>
+                    <span class="text-caption">Design System</span>
+                  </button>
+                  <button type="button" class="project-page__step" role="tab" id="process-tab-prototyping" aria-selected="false" aria-controls="process-panel-prototyping" tabindex="-1">
+                    <span class="project-page__step-num" aria-hidden="true">4</span>
+                    <span class="text-caption">Prototyping</span>
+                  </button>
+                </div>
+              <div class="project-page__process-panels">
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-define" aria-labelledby="process-tab-define" data-process-index="0">
+                  <p class="text-caption">Define</p>
+                  <p class="text-body">Mapped user flows/tasks, descriptive web structure, and site map.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-ideate" aria-labelledby="process-tab-ideate" data-process-index="1" hidden>
+                  <p class="text-caption">Ideate</p>
+                  <p class="text-body">Collected and researched UI references, then sketched concepts for screen layouts, nav options, and mobile/web configurations.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-design-system" aria-labelledby="process-tab-design-system" data-process-index="2" hidden>
+                  <p class="text-caption">Design System</p>
+                  <p class="text-body">Built from the Meal Prep Planner design system — color, type, spacing, controls, and cards.</p>
+                </div>
+                <div class="project-page__process-panel" role="tabpanel" id="process-panel-prototyping" aria-labelledby="process-tab-prototyping" data-process-index="3" hidden>
+                  <p class="text-caption">Prototyping</p>
+                  <p class="text-body">Created a usable prototype using Cursor, Figma and Figma Make. App hosting was done with Netlify and GitHub.</p>
+                </div>
               </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Define</p>
-                <p class="text-body">Mapped user journeys and prioritized a weekly planner flow.</p>
+                </div>
+                <button type="button" class="project-page__process-arrow" data-process-next aria-label="Next process phase">
+                  <svg class="project-page__process-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Ideate</p>
-                <p class="text-body">Sketched layout options for calendar, list, and recipe views.</p>
+            </div>
+          </section>
+          <section class="project-page__section" aria-labelledby="wireframes-heading">
+            <h2 class="text-h2" id="wireframes-heading">Defining the Project</h2>
+            <p class="text-body">Descriptive web structure, user flows/tasks, and site map.</p>
+            <div class="project-page__carousel" data-carousel aria-roledescription="carousel" aria-label="Project definition diagrams">
+              <div class="project-page__carousel-viewport">
+                <ul class="project-page__carousel-track">
+                  <li class="project-page__carousel-slide is-active" data-carousel-slide>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge descriptive web structure diagram">
+                      <img
+                        src="../meal-prep-planning-app/images/ux/01-web-structure.jpg"
+                        alt="Descriptive web structure outlining Dashboard, Cookbook, Grocery List, and Socials pages"
+                        width="564"
+                        height="535"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge site map diagram">
+                      <img
+                        src="../meal-prep-planning-app/images/ux/02-site-map.png"
+                        alt="Site map showing Dashboard branching into Cookbook, Socials, and Grocery List"
+                        width="4822"
+                        height="1952"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge plan meals user flow">
+                      <img
+                        src="../meal-prep-planning-app/images/ux/03-flow-plan-meals.png"
+                        alt="User flow diagram for planning meals for each day of the week"
+                        width="2784"
+                        height="3072"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge cookbook recipes user flow">
+                      <img
+                        src="../meal-prep-planning-app/images/ux/04-flow-cookbook.png"
+                        alt="User flow diagram for creating or adding recipes to the cookbook"
+                        width="3040"
+                        height="3296"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge grocery list user flow">
+                      <img
+                        src="../meal-prep-planning-app/images/ux/05-flow-grocery.png"
+                        alt="User flow diagram for generating and managing a grocery list"
+                        width="2944"
+                        height="3040"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge collaborate user flow">
+                      <img
+                        src="../meal-prep-planning-app/images/ux/06-flow-collaborate.png"
+                        alt="User flow diagram for collaborating on meal prepping"
+                        width="2144"
+                        height="3200"
+                      >
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <div class="project-page__process-card">
-                <p class="text-caption">Prototype</p>
-                <p class="text-body">Built clickable prototypes for usability testing.</p>
+              <div class="project-page__carousel-controls">
+                <button type="button" class="project-page__carousel-arrow" data-carousel-prev aria-label="Previous diagram">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="project-page__carousel-status text-caption" data-carousel-status aria-live="polite">1 / 6</p>
+                <button type="button" class="project-page__carousel-arrow" data-carousel-next aria-label="Next diagram">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </section>
 
           <section class="project-page__section" aria-labelledby="sketching-heading">
             <h2 class="text-h2" id="sketching-heading">Sketching</h2>
-            <p class="text-body">Early explorations focused on simplifying the weekly calendar and making grocery lists feel automatic rather than tedious.</p>
-            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Sketch gallery placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Sketches</span>
-            </div>
+            <p class="text-body">Concepts for screen layouts, nav options, and mobile/web configurations.</p>
+            <img
+              class="project-page__sketch"
+              src="../meal-prep-planning-app/images/sketches.png"
+              alt="Hand-drawn wireframe sketches for desktop and mobile Meal Prep Planning App screens"
+              width="2666"
+              height="2805"
+            >
           </section>
 
           <section class="project-page__section" aria-labelledby="visual-style-heading">
             <h2 class="text-h2" id="visual-style-heading">Visual Style Development</h2>
             <p class="text-caption">Moodboard</p>
-            <div class="project-page__placeholder project-page__placeholder--moodboard project-card__media--orb-alt" role="img" aria-label="Moodboard placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Moodboard</span>
-            </div>
+            <img
+              class="project-page__moodboard"
+              src="../meal-prep-planning-app/images/moodboard.png"
+              alt="Meal Prep Planning App moodboard with UI inspiration, color palette, and typography"
+              width="1842"
+              height="2200"
+            >
           </section>
 
-          <section class="project-page__section" aria-labelledby="style-guide-heading">
+          <section class="project-page__section project-page__section--open" aria-labelledby="style-guide-heading">
             <h2 class="text-h2" id="style-guide-heading">Design System / Style Guide</h2>
-            <div class="project-page__panel project-page__style-guide">
-              <div>
-                <p class="text-caption">Colors</p>
-                <div class="project-page__swatches">
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--bg-base);"></span>
-                    <span class="text-caption">Base</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--accent-default);"></span>
-                    <span class="text-caption">Accent</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--fg-primary);"></span>
-                    <span class="text-caption">Ink</span>
-                  </div>
-                  <div class="project-page__swatch">
-                    <span class="project-page__swatch-color" style="background-color: var(--bg-disabled);"></span>
-                    <span class="text-caption">Muted</span>
-                  </div>
-                </div>
-              </div>
-              <div class="project-page__type-samples">
-                <p class="text-caption">Typography</p>
-                <p class="text-h2">Albert Sans — Headlines</p>
-                <p class="text-body">Inter — Body and UI labels</p>
-              </div>
-              <div>
-                <p class="text-caption">Components</p>
-                <div class="project-page__components">
-                  <button type="button" class="btn btn--primary">Primary</button>
-                  <button type="button" class="btn btn--outline">Secondary</button>
-                  <span class="text-label">Label</span>
-                </div>
-              </div>
-            </div>
-          </section>
+            <div class="mepp-ds" aria-label="Meal Prep Planner design system guide">
 
-          <section class="project-page__section" aria-labelledby="wireframes-heading">
-            <h2 class="text-h2" id="wireframes-heading">UI/UX Development</h2>
-            <p class="text-body">Low-fidelity wireframes mapped the core flows: weekly planner, recipe detail, and auto-generated grocery list.</p>
-            <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient-alt" role="img" aria-label="Wireframes placeholder">
-              <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Wireframes</span>
+              <div class="mepp-ds__block">
+                <p class="mepp-ds__label">Colors</p>
+                <div class="mepp-ds__swatches">
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #FFFFFF;"></span>
+                    <p class="mepp-ds__swatch-name">White</p>
+                    <p class="mepp-ds__swatch-hex">#FFFFFF</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #FBF6EE;"></span>
+                    <p class="mepp-ds__swatch-name">Warm Sand</p>
+                    <p class="mepp-ds__swatch-hex">#FBF6EE</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #232017;"></span>
+                    <p class="mepp-ds__swatch-name">Charcoal</p>
+                    <p class="mepp-ds__swatch-hex">#232017</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #8C857A;"></span>
+                    <p class="mepp-ds__swatch-name">Stone</p>
+                    <p class="mepp-ds__swatch-hex">#8C857A</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #0B592F;"></span>
+                    <p class="mepp-ds__swatch-name">Forest</p>
+                    <p class="mepp-ds__swatch-hex">#0B592F</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #DF6F3B;"></span>
+                    <p class="mepp-ds__swatch-name">Terracotta</p>
+                    <p class="mepp-ds__swatch-hex">#DF6F3B</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #EFB627;"></span>
+                    <p class="mepp-ds__swatch-name">Mustard</p>
+                    <p class="mepp-ds__swatch-hex">#EFB627</p>
+                  </div>
+                  <div class="mepp-ds__swatch">
+                    <span class="mepp-ds__swatch-chip" style="background-color: #F0E7D8;"></span>
+                    <p class="mepp-ds__swatch-name">Cream</p>
+                    <p class="mepp-ds__swatch-hex">#F0E7D8</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mepp-ds__block">
+                <p class="mepp-ds__label">Typography</p>
+                <div class="mepp-ds__type-stack">
+                  <p class="mepp-ds__type-display-lg">Gelasio — Headlines</p>
+                  <p class="mepp-ds__type-body">Satoshi — Body and UI labels</p>
+                </div>
+              </div>
+
+              <div class="mepp-ds__block">
+                <p class="mepp-ds__label">Spacing</p>
+                <div class="mepp-ds__spacing">
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 4px;"></span>
+                    <p class="mepp-ds__label">4</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 8px;"></span>
+                    <p class="mepp-ds__label">8</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 12px;"></span>
+                    <p class="mepp-ds__label">12</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 16px;"></span>
+                    <p class="mepp-ds__label">16</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 24px;"></span>
+                    <p class="mepp-ds__label">24</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 32px;"></span>
+                    <p class="mepp-ds__label">32</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 48px;"></span>
+                    <p class="mepp-ds__label">48</p>
+                  </div>
+                  <div class="mepp-ds__space-item">
+                    <span class="mepp-ds__space-bar" style="width: 64px;"></span>
+                    <p class="mepp-ds__label">64</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mepp-ds__block">
+                <p class="mepp-ds__label">Components</p>
+                <div class="mepp-ds__controls">
+                  <span class="mepp-ds__btn mepp-ds__btn--primary">Primary</span>
+                  <span class="mepp-ds__btn mepp-ds__btn--secondary">Secondary</span>
+                  <span class="mepp-ds__btn mepp-ds__btn--accent">Accent</span>
+                  <span class="mepp-ds__type-label">Label</span>
+                </div>
+                <div class="mepp-ds__pills">
+                  <span class="mepp-ds__tag mepp-ds__tag--vegetarian">Vegetarian</span>
+                  <span class="mepp-ds__tag mepp-ds__tag--vegan">Vegan</span>
+                  <span class="mepp-ds__tag mepp-ds__tag--pescatarian">Pescatarian</span>
+                  <span class="mepp-ds__tag mepp-ds__tag--gluten-free">Gluten-free</span>
+                  <span class="mepp-ds__tag mepp-ds__tag--high-protein">High protein</span>
+                  <span class="mepp-ds__tag mepp-ds__tag--meal-prep">Meal prep</span>
+                  <span class="mepp-ds__pill mepp-ds__pill--popular">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M8.2 1.8c.2 1.7-.4 2.9-1.4 3.9-.9.9-1.5 1.8-1.5 3.1a4.2 4.2 0 0 0 8.4 0c0-2.3-1.6-3.6-2.3-5.2-.3 1.1.1 2 .8 2.6-1.7-.9-2.5-2.6-2.6-4.4-.4.4-.9 1.1-1.4 0z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Popular
+                  </span>
+                </div>
+              </div>
+
+              <div class="mepp-ds__block">
+                <p class="mepp-ds__label">Cards</p>
+                <div class="mepp-ds__cards">
+                  <article class="mepp-ds__media-card">
+                    <img class="mepp-ds__media-card-photo" src="../meal-prep-planning-app/images/shrimp-tacos.jpg" alt="Shrimp tacos with avocado and cabbage slaw" width="900" height="675">
+                    <div class="mepp-ds__media-card-body">
+                      <div class="mepp-ds__media-card-top">
+                        <h4 class="mepp-ds__media-card-title">Shrimp Tacos</h4>
+                        <p class="mepp-ds__media-card-rating">
+                          <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill="currentColor" d="M8 1.4l1.9 3.85 4.25.62-3.08 3 .73 4.23L8 11.1l-3.8 2 .73-4.23-3.08-3 4.25-.62L8 1.4z"/>
+                          </svg>
+                          <span>51</span>
+                        </p>
+                      </div>
+                      <p class="mepp-ds__media-card-desc">Citrus shrimp with cabbage slaw.</p>
+                      <div class="mepp-ds__media-card-footer">
+                        <div class="mepp-ds__media-card-author">
+                          <img src="../meal-prep-planning-app/images/avatar-jordan.jpg" alt="" width="28" height="28">
+                          <span>Jordan Lee</span>
+                        </div>
+                        <div class="mepp-ds__media-card-tags">
+                          <span class="mepp-ds__tag mepp-ds__tag--pescatarian">Pescatarian</span>
+                          <span class="mepp-ds__tag mepp-ds__tag--gluten-free">Gluten-free</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <div class="mepp-ds__list-stack">
+                    <article class="mepp-ds__list-card">
+                      <img class="mepp-ds__list-card-thumb" src="../meal-prep-planning-app/images/quinoa-bowl.jpg" alt="Mediterranean quinoa bowl" width="400" height="400">
+                      <div class="mepp-ds__list-card-body">
+                        <p class="mepp-ds__list-card-meal mepp-ds__list-card-meal--breakfast">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3 11.5h10M4.5 11.5c0-2.5 1.6-4.5 3.5-5.5 1.9 1 3.5 3 3.5 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.5v1.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                          </svg>
+                          Breakfast
+                        </p>
+                        <h4 class="mepp-ds__list-card-title">Mediterranean Quinoa Bowl</h4>
+                        <p class="mepp-ds__list-card-meta">
+                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M8 5v3.15l2 1.35" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          40 min · 4 servings
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="mepp-ds__list-card">
+                      <img class="mepp-ds__list-card-thumb" src="../meal-prep-planning-app/images/honey-salmon.jpg" alt="Honey garlic salmon" width="400" height="400">
+                      <div class="mepp-ds__list-card-body">
+                        <p class="mepp-ds__list-card-meal mepp-ds__list-card-meal--lunch">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="2.25" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M8 2.5v1.2M8 12.3v1.2M2.5 8h1.2M12.3 8h1.2M4.1 4.1l.85.85M11.05 11.05l.85.85M4.1 11.9l.85-.85M11.05 4.95l.85-.85" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                          </svg>
+                          Lunch
+                        </p>
+                        <h4 class="mepp-ds__list-card-title">Honey Garlic Salmon</h4>
+                        <p class="mepp-ds__list-card-meta">
+                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M8 5v3.15l2 1.35" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          30 min · 2 servings
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="mepp-ds__list-card">
+                      <img class="mepp-ds__list-card-thumb" src="../meal-prep-planning-app/images/chicken-wraps.jpg" alt="Chicken Caesar wraps" width="400" height="400">
+                      <div class="mepp-ds__list-card-body">
+                        <p class="mepp-ds__list-card-meal mepp-ds__list-card-meal--dinner">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M11.5 10.5c0-2.2-1.6-4-3.5-4.5-1.9.5-3.5 2.3-3.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                            <path d="M4 12.25h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                          </svg>
+                          Dinner
+                        </p>
+                        <h4 class="mepp-ds__list-card-title">Chicken Caesar Wraps</h4>
+                        <p class="mepp-ds__list-card-meta">
+                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M8 5v3.15l2 1.35" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          30 min · 4 servings
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </section>
 
           <section class="project-page__section" aria-labelledby="gallery-heading">
-            <h2 class="text-h2" id="gallery-heading">Gallery</h2>
-            <div class="project-page__gallery">
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb" role="img" aria-label="Screen mockup 1 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Screen 01</span>
+            <h2 class="text-h2" id="gallery-heading">Mockups</h2>
+            <div class="project-page__mockups">
+              <figure class="device-mockup device-mockup--desktop">
+                <button type="button" class="device-mockup__trigger" data-lightbox-trigger aria-label="Enlarge desktop login mockup">
+                  <span class="device-mockup__browser" aria-hidden="true">
+                    <span class="device-mockup__dots">
+                      <span></span><span></span><span></span>
+                    </span>
+                    <span class="device-mockup__url">mealplanner.app/login</span>
+                  </span>
+                  <span class="device-mockup__screen">
+                    <img
+                      src="../meal-prep-planning-app/images/mockups/desktop-login.png"
+                      alt="Desktop login screen with salad hero image and sign-in form"
+                      width="1356"
+                      height="922"
+                    >
+                  </span>
+                </button>
+                <figcaption class="text-caption">Desktop — Login</figcaption>
+              </figure>
+
+              <figure class="device-mockup device-mockup--mobile">
+                <button type="button" class="device-mockup__trigger" data-lightbox-trigger aria-label="Enlarge mobile dashboard mockup">
+                  <span class="device-mockup__phone" aria-hidden="true">
+                    <span class="device-mockup__btn device-mockup__btn--silent"></span>
+                    <span class="device-mockup__btn device-mockup__btn--volume-up"></span>
+                    <span class="device-mockup__btn device-mockup__btn--volume-down"></span>
+                    <span class="device-mockup__btn device-mockup__btn--power"></span>
+                    <span class="device-mockup__bezel">
+                      <span class="device-mockup__island"></span>
+                      <span class="device-mockup__screen">
+                        <img
+                          src="../meal-prep-planning-app/images/mockups/mobile-dashboard.png"
+                          alt="Mobile dashboard with weekly planner and meal cards"
+                          width="523"
+                          height="942"
+                        >
+                      </span>
+                      <span class="device-mockup__home"></span>
+                    </span>
+                  </span>
+                </button>
+                <figcaption class="text-caption">Mobile — Dashboard</figcaption>
+              </figure>
+            </div>
+
+            <div class="project-page__carousel" data-carousel aria-roledescription="carousel" aria-label="Meal Prep prototype screens">
+              <div class="project-page__carousel-viewport">
+                <ul class="project-page__carousel-track">
+                  <li class="project-page__carousel-slide is-active" data-carousel-slide>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge dashboard screen">
+                      <img
+                        src="../meal-prep-planning-app/images/screens/01-dashboard.png"
+                        alt="Meal Planner dashboard with weekly date picker and breakfast, lunch, and dinner cards"
+                        width="1506"
+                        height="925"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge cookbook screen">
+                      <img
+                        src="../meal-prep-planning-app/images/screens/03-cookbook.png"
+                        alt="Meal Planner cookbook with recipe search and recipe grid"
+                        width="1487"
+                        height="927"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge socials recipe detail">
+                      <img
+                        src="../meal-prep-planning-app/images/screens/04-socials.png"
+                        alt="Meal Planner socials page with Ahi Poke Bowl recipe detail modal"
+                        width="1488"
+                        height="932"
+                      >
+                    </button>
+                  </li>
+                  <li class="project-page__carousel-slide" data-carousel-slide hidden>
+                    <button type="button" class="project-page__carousel-zoom" data-lightbox-trigger aria-label="Enlarge grocery list screen">
+                      <img
+                        src="../meal-prep-planning-app/images/screens/05-grocery.png"
+                        alt="Meal Planner grocery list with checklist progress and editable items"
+                        width="1492"
+                        height="931"
+                      >
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--gradient" role="img" aria-label="Screen mockup 2 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--dark text-caption">Screen 02</span>
-              </div>
-              <div class="project-page__placeholder project-page__placeholder--wide project-card__media--orb-alt" role="img" aria-label="Screen mockup 3 placeholder">
-                <span class="project-page__placeholder-label project-card__badge project-card__badge--light text-caption">Screen 03</span>
+              <div class="project-page__carousel-controls">
+                <button type="button" class="project-page__carousel-arrow" data-carousel-prev aria-label="Previous screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M12.5 4.5L7 10l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="project-page__carousel-status text-caption" data-carousel-status aria-live="polite">1 / 4</p>
+                <button type="button" class="project-page__carousel-arrow" data-carousel-next aria-label="Next screen">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </section>
 
           <section class="project-page__deploy" aria-labelledby="deployment-heading">
             <h2 class="text-h2" id="deployment-heading">Deployment</h2>
-            <p class="text-body">The prototype was built with React and deployed on Netlify for user testing and portfolio presentation.</p>
-            <a href="#" class="btn btn--outline">Visit the website</a>
-          </section>
-
-          <section class="project-page__reflection" aria-labelledby="reflection-heading">
-            <h2 class="text-h2" id="reflection-heading">Reflection</h2>
-            <p class="text-body">This project strengthened my ability to balance feature depth with a calm, approachable interface. User testing revealed that grocery list automation was the highest-value moment in the flow.</p>
-            <p class="text-body">If I continued development, I would explore recipe import integrations and smarter prep-time estimates based on user history.</p>
+            <p class="text-body">The prototype was built with Cursor and Figma Make. Deployed using Netlify and GitHub.</p>
+            <a href="https://meal-prep-planner-app.netlify.app/login" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visit the website</a>
           </section>
 
         </div>
